@@ -213,7 +213,7 @@ namespace RentalApp.Data.Repositories
         // HELPER - Map database reader to Vehicle object
         private Vehicle MapReaderToVehicle(MySqlDataReader reader)
         {
-            // For now, create a generic Sedan (you can improve this later)
+            // Create a generic Sedan for now (you can improve this later based on CategoryID)
             Vehicle vehicle = new Sedan();
 
             vehicle.VehicleId = reader.GetInt32("ID");

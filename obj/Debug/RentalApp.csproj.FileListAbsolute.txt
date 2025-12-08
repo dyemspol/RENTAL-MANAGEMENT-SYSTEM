@@ -7,9 +7,11 @@ C:\Users\fuyfuy\Desktop\rental\RentalApp\obj\Debug\RentalApp.exe
 C:\Users\fuyfuy\Desktop\rental\RentalApp\obj\Debug\RentalApp.pdb
 C:\Users\fuyfuy\Desktop\rental\RentalApp\obj\Debug\RentalApp.exe.config
 C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.csproj.AssemblyReference.cache
-C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.exe.config
-C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.exe
-C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.pdb
+C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.UI.LoginForm.resources
+C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.UI.MainDashboardForm.resources
+C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.UI.Sections.PickupsView.resources
+C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.csproj.GenerateResource.cache
+C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\bin\Debug\RentalApp.exe.config
 C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\bin\Debug\RentalApp.exe
 C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\bin\Debug\RentalApp.pdb
@@ -44,9 +46,6 @@ C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\bin\Debug\System.Memory.xml
 C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.UI.LoginForm.resources
-C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.UI.MainDashboardForm.resources
-C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.UI.Sections.PickupsView.resources
-C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.csproj.GenerateResource.cache
-C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.csproj.Up2Date
+C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.exe
+C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.pdb

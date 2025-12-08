@@ -98,9 +98,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DATA\DatabaseHelper.cs" />
+    <!-- Repositories -->
+    <Compile Include="DATA\Repositories\UserRepository.cs" />
+    <Compile Include="DATA\Repositories\VehicleRepository.cs" />
+    <Compile Include="DATA\Repositories\CustomerRepository.cs" />
+    <Compile Include="DATA\Repositories\ReservationRepository.cs" />
+    <Compile Include="DATA\Repositories\RentalRepository.cs" />
+    <Compile Include="DATA\Repositories\InvoiceRepository.cs" />
+    <Compile Include="DATA\Repositories\PaymentRepository.cs" />
+    <!-- Services (if you have them) -->
+    <Compile Include="Models\Services\BillingManager.cs" />
+    <Compile Include="Models\Services\CustomerManager.cs" />
+    <Compile Include="Models\Services\MaintenanceManager.cs" />
+    <Compile Include="Models\Services\RateManager.cs" />
+    <Compile Include="Models\Services\RentalManager.cs" />
+    <Compile Include="Models\Services\ReportManager.cs" />
+    <Compile Include="Models\Services\ReservationManager.cs" />
+    <Compile Include="Models\Services\VehicleManager.cs" />
+    <!-- User Models -->
     <Compile Include="Models\Users\Admin.cs" />
     <Compile Include="Models\Users\RentalAgent.cs" />
     <Compile Include="Models\Users\User.cs" />
+    <!-- Vehicle Models -->
     <Compile Include="Models\Vehicles\Vehicles.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="UI\LoginForm.cs">
@@ -169,7 +188,6 @@
     <Compile Include="Models\Core\DamageReport.cs" />
     <Compile Include="Models\Core\MaintenanceRecord.cs" />
     <!-- Vehicle Models -->
-    <Compile Include="Models\Vehicles\Vehicle.cs" />
     <Compile Include="Models\Vehicles\Sedan.cs" />
     <Compile Include="Models\Vehicles\SUV.cs" />
     <Compile Include="Models\Vehicles\Hatchback.cs" />

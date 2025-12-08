@@ -45,5 +45,11 @@ namespace RentalApp.Models.Users
             PasswordHash = password;
         }
 
+        public string GetPasswordHash()
+        {
+            return PasswordHash;
+        }
+
+
     }
 }

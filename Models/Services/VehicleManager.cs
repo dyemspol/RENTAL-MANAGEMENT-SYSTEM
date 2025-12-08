@@ -1,0 +1,83 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using RentalApp.Data.Repositories;
+using RentalApp.Models.Vehicles;
+using RentalApp.Models.Core;
+
+namespace RentalApp.Models.Services
+{
+    public class VehicleManager
+    {
+        private VehicleRepository _vehicleRepository;
+
+
+        public VehicleManager()
+        {
+            _vehicleRepository = new VehicleRepository();
+        }
+
+        public void Add(Vehicle vehicle)
+        {
+
+            if (string.IsNullOrEmpty(vehicle.Make) || string.IsNullOrEmpty(vehicle.Model))
+            {
+                throw new ArgumentException("Make and Model are required.");
+            }
+
+            if (vehicle.Year < 1900 || vehicle.Year > DateTime.Now.Year)
+            {
+                throw new ArgumentException("Year must be between 1900 and the current year.");
+            }
+
+            if (string.IsNullOrEmpty(vehicle.Color))
+            {
+                throw new ArgumentException("Color is required.");
+            }
+
+            if (string.IsNullOrEmpty(vehicle.LicensePlate))
+            {
+                throw new ArgumentException("License Plate is required.");
+            }
+
+            if (string.IsNullOrEmpty(vehicle.VIN))
+            {
+                throw new ArgumentException("VIN is required.");
+            }
+
+            if (vehicle.CategoryId == 0)
+            {
+                throw new ArgumentException("Category is required.");
+            }
+
+            if (vehicle.Status == 0)
+            {
+                throw new ArgumentException("Status is required.");
+            }
+
+            if (vehicle.Mileage < 0)
+            {
+                throw new ArgumentException("Mileage must be greater than or equal to 0.");
+            }
+
+            if (vehicle.Fuel== 0)
+            {
+                throw new ArgumentException("Fuel is required.");
+            }
+
+            if (vehicle.Transmission == 0)
+            {
+                throw new ArgumentException("Transmission is required.");
+            }
+
+            if (vehicle.SeatingCapacity < 1)
+            {
+                throw new ArgumentException("Seating Capacity must be greater than 0.");
+            }   
+
+            _vehicleRepository.Add(vehicle);
+        }
+    }
+}

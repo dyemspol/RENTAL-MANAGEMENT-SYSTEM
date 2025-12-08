@@ -19,10 +19,10 @@ namespace RentalApp.Data.Repositories
                 conn.Open();
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@firstname", user.FirstName);
-                    cmd.Parameters.AddWithValue("@lastname", user.LastName);
+                    cmd.Parameters.AddWithValue("@firstname", user.Firstname);
+                    cmd.Parameters.AddWithValue("@lastname", user.Lastname);
                     cmd.Parameters.AddWithValue("@username", user.Username);
-                    cmd.Parameters.AddWithValue("@password", user.PasswordHash);
+                    cmd.Parameters.AddWithValue("@password", user.GetPasswordHash());
                     cmd.Parameters.AddWithValue("@role", user.GetRoleName());
 
                     // Return the new user ID
@@ -80,6 +80,7 @@ namespace RentalApp.Data.Repositories
 
             return null; // User not found
         }
+
 
         // READ - Get all users
         public List<User> GetAll()
@@ -148,10 +149,10 @@ namespace RentalApp.Data.Repositories
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", user.Id);
-                    cmd.Parameters.AddWithValue("@firstname", user.FirstName);
-                    cmd.Parameters.AddWithValue("@lastname", user.LastName);
+                    cmd.Parameters.AddWithValue("@firstname", user.Firstname);
+                    cmd.Parameters.AddWithValue("@lastname", user.Lastname);
                     cmd.Parameters.AddWithValue("@username", user.Username);
-                    cmd.Parameters.AddWithValue("@password", user.PasswordHash);
+                    cmd.Parameters.AddWithValue("@password", user.GetPasswordHash());
                     cmd.Parameters.AddWithValue("@role", user.GetRoleName());
 
                     cmd.ExecuteNonQuery();

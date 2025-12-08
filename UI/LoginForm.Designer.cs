@@ -34,7 +34,6 @@ namespace RentalApp.UI
             this.appTitleLabel = new System.Windows.Forms.Label();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
-            this.roleComboBox = new System.Windows.Forms.ComboBox();
             this.roleLabel = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
             this.loginButton = new System.Windows.Forms.Button();
@@ -105,7 +104,6 @@ namespace RentalApp.UI
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.Color.White;
-            this.rightPanel.Controls.Add(this.roleComboBox);
             this.rightPanel.Controls.Add(this.roleLabel);
             this.rightPanel.Controls.Add(this.exitButton);
             this.rightPanel.Controls.Add(this.loginButton);
@@ -122,20 +120,6 @@ namespace RentalApp.UI
             this.rightPanel.Size = new System.Drawing.Size(440, 420);
             this.rightPanel.TabIndex = 1;
             // 
-            // roleComboBox
-            // 
-            this.roleComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.roleComboBox.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.roleComboBox.FormattingEnabled = true;
-            this.roleComboBox.Items.AddRange(new object[] {
-            "Admin / Manager",
-            "Rental Agent"});
-            this.roleComboBox.Location = new System.Drawing.Point(43, 200);
-            this.roleComboBox.Name = "roleComboBox";
-            this.roleComboBox.Size = new System.Drawing.Size(350, 25);
-            this.roleComboBox.TabIndex = 2;
-            this.roleComboBox.SelectedIndexChanged += new System.EventHandler(this.roleComboBox_SelectedIndexChanged);
-            // 
             // roleLabel
             // 
             this.roleLabel.AutoSize = true;
@@ -143,9 +127,8 @@ namespace RentalApp.UI
             this.roleLabel.ForeColor = System.Drawing.Color.DimGray;
             this.roleLabel.Location = new System.Drawing.Point(40, 180);
             this.roleLabel.Name = "roleLabel";
-            this.roleLabel.Size = new System.Drawing.Size(65, 15);
+            this.roleLabel.Size = new System.Drawing.Size(0, 15);
             this.roleLabel.TabIndex = 8;
-            this.roleLabel.Text = "Sign in as *";
             // 
             // exitButton
             // 
@@ -154,7 +137,7 @@ namespace RentalApp.UI
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.exitButton.ForeColor = System.Drawing.Color.DimGray;
-            this.exitButton.Location = new System.Drawing.Point(230, 320);
+            this.exitButton.Location = new System.Drawing.Point(235, 320);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(80, 32);
             this.exitButton.TabIndex = 6;
@@ -169,7 +152,7 @@ namespace RentalApp.UI
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.loginButton.ForeColor = System.Drawing.Color.White;
-            this.loginButton.Location = new System.Drawing.Point(120, 320);
+            this.loginButton.Location = new System.Drawing.Point(108, 320);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(100, 32);
             this.loginButton.TabIndex = 5;
@@ -180,7 +163,7 @@ namespace RentalApp.UI
             // passwordTextBox
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.passwordTextBox.Location = new System.Drawing.Point(43, 270);
+            this.passwordTextBox.Location = new System.Drawing.Point(43, 213);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '●';
             this.passwordTextBox.Size = new System.Drawing.Size(350, 24);
@@ -191,11 +174,12 @@ namespace RentalApp.UI
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.passwordLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.passwordLabel.Location = new System.Drawing.Point(40, 250);
+            this.passwordLabel.Location = new System.Drawing.Point(40, 195);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(57, 15);
             this.passwordLabel.TabIndex = 4;
             this.passwordLabel.Text = "Password";
+            this.passwordLabel.Click += new System.EventHandler(this.passwordLabel_Click);
             // 
             // usernameTextBox
             // 
@@ -268,7 +252,6 @@ namespace RentalApp.UI
         private System.Windows.Forms.Label kpiLabel;
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.Panel rightPanel;
-        private System.Windows.Forms.ComboBox roleComboBox;
         private System.Windows.Forms.Label roleLabel;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button loginButton;
