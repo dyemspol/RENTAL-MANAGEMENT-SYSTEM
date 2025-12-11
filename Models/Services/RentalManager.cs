@@ -8,5 +8,11 @@ namespace RentalApp.Models.Services
 {
     public class RentalManager
     {
+        private RentalRepository _rentalRepository;
+
+        public RentalManager()
+        {
+            _rentalRepository = new RentalRepository();
+        }
     }
 }
