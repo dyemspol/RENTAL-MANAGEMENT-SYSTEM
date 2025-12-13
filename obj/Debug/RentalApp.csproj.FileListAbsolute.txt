@@ -54,3 +54,5 @@ C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.UI.Sect
 C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.UI.Sections.ReservationsView.resources
 C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.UI.Popups.VehicleDetailsForm.resources
 C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.UI.Popups.CustomerDetailsForm.resources
+C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.UI.Popups.ReservationForm.resources
+C:\Users\Admin\Source\Repos\RENTAL-MANAGEMENT-SYSTEM\obj\Debug\RentalApp.UI.Popups.AddnewCustomer.resources

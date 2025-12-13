@@ -77,6 +77,14 @@ namespace RentalApp.UI.Sections
         {
             
         }
+
+        private void newReservationButton_Click(object sender, EventArgs e)
+        {
+            using (var form = new Popups.ReservationForm())
+            {
+                form.ShowDialog();
+            }
+        }
     }
 }
 
