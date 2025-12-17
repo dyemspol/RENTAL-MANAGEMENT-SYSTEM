@@ -106,6 +106,7 @@
     <Compile Include="DATA\Repositories\CustomerRepository.cs" />
     <Compile Include="DATA\Repositories\ReservationRepository.cs" />
     <Compile Include="DATA\Repositories\RentalRepository.cs" />
+    <Compile Include="DATA\Repositories\MaintenanceRepository.cs" />
     <Compile Include="DATA\Repositories\InvoiceRepository.cs" />
     <Compile Include="DATA\Repositories\PaymentRepository.cs" />
     <!-- Services (if you have them) -->

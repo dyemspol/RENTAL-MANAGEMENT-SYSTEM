@@ -42,7 +42,7 @@ namespace RentalApp.UI.Popups
                 }
                 
                 cmbVehicles.DataSource = availableVehicles;
-                // DisplayMember handles itself via ToString() override we added!
+              
             }
             catch (Exception ex)
             {
@@ -86,7 +86,6 @@ namespace RentalApp.UI.Popups
                 StartDate = dtpStartDate.Value,
                 EndDate = dtpEndDate.Value,
                 Status = ReservationStatus.Pending
-                // TotalCost removed (not in Model)
             };
 
             MessageBox.Show($"Ready to Reserve:\nCar: {selectedVehicle}\nFor: {selectedCustomer}\nFrom: {dtpStartDate.Value}\nTo: {dtpEndDate.Value}", 
@@ -95,7 +94,8 @@ namespace RentalApp.UI.Popups
             try 
             {
                  _reservationManager.CreateReservation(newReservation);
-                 this.DialogResult = DialogResult.OK;
+                _vehicleManager.UpdateVehicleStatus(selectedVehicle.VehicleId, VehicleStatus.Reserved);
+                this.DialogResult = DialogResult.OK;
                  this.Close();
             }
             catch (Exception ex)

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RentalApp.Data.Repositories;
+using RentalApp.Models.Core;
 
 namespace RentalApp.Models.Services
 {
