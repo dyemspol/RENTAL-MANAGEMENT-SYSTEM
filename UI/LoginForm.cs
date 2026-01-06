@@ -38,7 +38,7 @@ namespace RentalApp.UI
                     Session.CurrentUserRole = user.GetRoleName();
 
                     MessageBox.Show("Login successful.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    var dashboard = new MainDashboardForm();
+                    var dashboard = new MainDashboardForm(user);
                     dashboard.StartPosition = FormStartPosition.CenterScreen;
                     dashboard.Show();
                     Hide();

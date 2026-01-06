@@ -52,5 +52,18 @@ namespace RentalApp.Models.Services
                 _invoiceRepository.Update(invoice);
             }
         }
+        public int CountToday()
+        {
+            return _invoiceRepository.CountToday();
+        }
+        public int SumInvoicedToday()
+        {
+            return _invoiceRepository.SumInvoicedToday();
+        }
+        public int SumRevenue()
+        {
+            return _invoiceRepository.SumRevenue();
+        }
+        
     }
 }

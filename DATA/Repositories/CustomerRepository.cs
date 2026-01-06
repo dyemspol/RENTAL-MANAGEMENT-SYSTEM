@@ -207,6 +207,8 @@ namespace RentalApp.Data.Repositories
                 Type = (CustomerType)Enum.Parse(typeof(CustomerType), reader.GetString("CustomerType")),
                 IsBlacklisted = reader.GetBoolean("IsBlacklisted"),
                 CreatedAt = reader.GetDateTime("CreatedAt")
+
+                
             };
 
             // Populate active rental info if found (from the JOIN)
@@ -223,6 +225,8 @@ namespace RentalApp.Data.Repositories
                 }
             }
             catch { /* Ignore if columns not found */ }
+
+            
 
             return customer;
         }

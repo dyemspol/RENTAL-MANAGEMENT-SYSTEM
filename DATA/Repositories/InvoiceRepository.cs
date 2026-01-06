@@ -133,6 +133,45 @@ namespace RentalApp.Data.Repositories
                 }
             }
         }
+        public int CountToday()
+        {
+            string sql = "SELECT COUNT(*) FROM Invoices WHERE DATE(IssueDate) = CURDATE()";
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+        public int SumInvoicedToday()
+        {
+            string sql = "SELECT SUM(TotalAmount) FROM Invoices WHERE DATE(IssueDate) = CURDATE() AND IsPaid = TRUE";
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+        public int SumRevenue()
+        {
+            string sql = "SELECT SUM(TotalAmount) FROM Invoices WHERE IsPaid = TRUE";
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
 
         // HELPER
         private Invoice MapReaderToInvoice(MySqlDataReader reader)
@@ -152,5 +191,6 @@ namespace RentalApp.Data.Repositories
                 IsPaid = reader.GetBoolean("IsPaid")
             };
         }
+        
     }
 }

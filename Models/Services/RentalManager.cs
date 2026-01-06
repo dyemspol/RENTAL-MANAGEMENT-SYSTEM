@@ -83,5 +83,24 @@ namespace RentalApp.Models.Services
 
             _rentalRepository.Update(rental);
         }
+
+        public int CountTodayPickups()
+        {
+            return _rentalRepository.CountTodayPickups();
+        }
+
+        public int CountActive()
+        {
+            return _rentalRepository.CountActive();
+        }
+
+        public int CountCompleted()
+        {
+            return _rentalRepository.CountCompleted();
+        }
+        public int CountPendingReturns()
+        {
+            return _rentalRepository.CountPendingReturns();
+        }
     }
 }

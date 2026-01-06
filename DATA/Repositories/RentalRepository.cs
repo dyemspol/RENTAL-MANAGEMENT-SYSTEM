@@ -170,6 +170,61 @@ namespace RentalApp.Data.Repositories
             }
         }
 
+        public int CountTodayPickups()
+        {
+            string sql = "SELECT COUNT(*) FROM Rentals WHERE DATE(ActualPickupDate) = CURDATE()";
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+        public int CountPendingReturns()
+        {
+            string sql = "SELECT COUNT(*) FROM Rentals WHERE DATE(ExpectedReturnDate) = CURDATE() AND Status = 'Active'";
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+
+        public int CountActive()
+        {
+            string sql = "SELECT COUNT(*) FROM Rentals WHERE Status = 'Active'";
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+
+        public int CountCompleted()
+        {
+            string sql = "SELECT COUNT(*) FROM Rentals WHERE Status = 'Completed'";
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+
         // HELPER
         private Rental MapReaderToRental(MySqlDataReader reader)
         {

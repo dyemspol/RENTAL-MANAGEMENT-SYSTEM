@@ -244,7 +244,6 @@ namespace RentalApp.Data.Repositories
                     return Convert.ToInt32(cmd.ExecuteScalar());
                 }
             }
-            return 0;
         }
         public int CountConfirmed()
         {
@@ -258,7 +257,6 @@ namespace RentalApp.Data.Repositories
                     return Convert.ToInt32(cmd.ExecuteScalar());
                 }
             }
-            return 0;
         }
 
         // HELPER
@@ -308,6 +306,20 @@ namespace RentalApp.Data.Repositories
             catch { /* Columns not found, ignore */ }
 
             return reservation;
+        }
+
+        public int CountTotal()
+        {
+            string sql = "SELECT COUNT(*) FROM Reservations;";
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
         }
     }
 }

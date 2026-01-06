@@ -8,6 +8,7 @@ namespace RentalApp.Models.Core
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string FullName => GetFullName();
         public string Email { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
@@ -24,7 +25,7 @@ namespace RentalApp.Models.Core
         // Dashboard Display Properties (Not in Customers Table)
         public string CurrentVehicleInfo { get; set; } // e.g. "Toyota Camry"
         public int? ActiveReservationId { get; set; } // ID of any active reservation
-
+        
         // Constructor
         public Customer()
         {

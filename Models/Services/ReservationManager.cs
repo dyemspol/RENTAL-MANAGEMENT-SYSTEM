@@ -94,5 +94,10 @@ namespace RentalApp.Models.Services
 
             _reservationRepository.UpdateStatus(reservationId, status);
         }
+        public int CountTotal()
+        {
+            return _reservationRepository.CountTotal();
+        }
+
     }
 }

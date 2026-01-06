@@ -1,6 +1,7 @@
 using System.Windows.Forms;
 using System;
 using System.IO;
+using System.Collections.Generic;
 using RentalApp.Models.Services;
 using RentalApp.Models.Core;
 
@@ -10,6 +11,7 @@ namespace RentalApp.UI.Sections
     {
         private CustomerManager _customerManager;
 
+        private List<Customer> _allCustomers;
         public CustomersView()
         {
             InitializeComponent();
@@ -17,9 +19,10 @@ namespace RentalApp.UI.Sections
             
             // Make columns stretch to fill width
             customersGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            
+            filterComboBox.SelectedIndex = 0;
+            filterComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             _customerManager = new CustomerManager();
-
+            
             LoadCustomers();
         }
 
@@ -55,30 +58,71 @@ namespace RentalApp.UI.Sections
         {
             try
             {
-                var customers = _customerManager.GetAllCustomers();
-                
-                // Fix: Assign data to bindingSource FIRST
-                var bindingSource = new BindingSource();
-                bindingSource.DataSource = customers;
-                
-                customersGrid.AutoGenerateColumns = true;
-                customersGrid.DataSource = bindingSource;
-                customersGrid.ReadOnly = true;
-                customersGrid.Columns["DriverLicenseNumber"].Visible = false;
-                customersGrid.Columns["LicenseIssueDate"].Visible = false;
-                customersGrid.Columns["LicenseExpiryDate"].Visible = false;
-                customersGrid.Columns["IsBlacklisted"].Visible = false;
-                customersGrid.Columns["Id"].Visible = false;
-                customersGrid.Columns["Address"].Visible = false;
-                customersGrid.Columns["LicenseState"].Visible = false;
-                customersGrid.Columns["LastName"].Visible = false;
-                customersGrid.Columns["CreatedAt"].Visible = false;
-                customersGrid.Refresh();
+                _allCustomers = _customerManager.GetAllCustomers();
+                UpdateGrid(_allCustomers);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading customers: " + ex.Message);
             }
+        }
+
+        private void UpdateGrid(List<Customer> list)
+        {
+            var bindingSource = new BindingSource();
+            bindingSource.DataSource = list;
+
+            customersGrid.AutoGenerateColumns = true;
+            customersGrid.DataSource = bindingSource;
+            customersGrid.ReadOnly = true;
+
+            if(customersGrid.Columns["Id"] != null) customersGrid.Columns["Id"].Visible = false;
+            if(customersGrid.Columns["DriverLicenseNumber"] != null) customersGrid.Columns["DriverLicenseNumber"].Visible = false;
+            if(customersGrid.Columns["LicenseIssueDate"] != null) customersGrid.Columns["LicenseIssueDate"].Visible = false;
+            if(customersGrid.Columns["LicenseExpiryDate"] != null) customersGrid.Columns["LicenseExpiryDate"].Visible = false;
+            if(customersGrid.Columns["IsBlacklisted"] != null) customersGrid.Columns["IsBlacklisted"].Visible = false;
+            if(customersGrid.Columns["Address"] != null) customersGrid.Columns["Address"].Visible = false;
+            if(customersGrid.Columns["LicenseState"] != null) customersGrid.Columns["LicenseState"].Visible = false;
+            if(customersGrid.Columns["FirstName"] != null) customersGrid.Columns["FirstName"].Visible = false;
+            if(customersGrid.Columns["LastName"] != null) customersGrid.Columns["LastName"].Visible = false;
+            if(customersGrid.Columns["CreatedAt"] != null) customersGrid.Columns["CreatedAt"].Visible = false;
+
+            // Set Headers
+            if (customersGrid.Columns["FullName"] != null) customersGrid.Columns["FullName"].HeaderText = "Customer's Name";
+            if (customersGrid.Columns["Email"] != null) customersGrid.Columns["Email"].HeaderText = "Email";
+            if (customersGrid.Columns["DateOfBirth"] != null) customersGrid.Columns["DateOfBirth"].HeaderText = "Date of Birth";
+            if (customersGrid.Columns["CurrentVehicleInfo"] != null) customersGrid.Columns["CurrentVehicleInfo"].HeaderText = "Current Vehicle";
+            if (customersGrid.Columns["ActiveReservationId"] != null) customersGrid.Columns["ActiveReservationId"].HeaderText = "Reservation ID";
+
+            customersGrid.Refresh();
+        }
+
+        private void filterComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_allCustomers == null) return;
+
+            string filter = filterComboBox.SelectedItem?.ToString();
+            List<Customer> filteredList;
+
+            switch (filter)
+            {
+                case "Corporate clients":
+                    filteredList = _allCustomers.FindAll(c => c.Type == CustomerType.Corporate);
+                    break;
+                case "Blacklisted":
+                    filteredList = _allCustomers.FindAll(c => c.IsBlacklisted);
+                    break;
+                case "Frequent renters":
+                    // Placeholder: filter for those with a current vehicle for now
+                    filteredList = _allCustomers.FindAll(c => !string.IsNullOrEmpty(c.CurrentVehicleInfo));
+                    break;
+                case "All customers":
+                default:
+                    filteredList = _allCustomers;
+                    break;
+            }
+
+            UpdateGrid(filteredList);
 
         }
         private void customersGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)

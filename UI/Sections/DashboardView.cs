@@ -2,26 +2,45 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
+using RentalApp.Models.Services;
+
 namespace RentalApp.UI.Sections
 {
     public partial class DashboardView : UserControl
     {
+        private VehicleManager _vehicleManager;
+        private RentalManager _rentalManager;
+        private ReservationManager _reservationManager;
+        private BillingManager _billingManager;
+
         public DashboardView()
         {
             InitializeComponent();
+            _vehicleManager = new VehicleManager();
+            _rentalManager = new RentalManager();
+            _reservationManager = new ReservationManager();
+            _billingManager = new BillingManager();
+            
             InitializeCards();
         }
 
         private void InitializeCards()
         {
+            // Fetch real data
+            int todayPickups = _rentalManager.CountTodayPickups();
+            int todayReturns = _rentalManager.CountPendingReturns();
+            int fleetAvailable = _vehicleManager.CountAvailable();
+            int activeRentals = _rentalManager.CountActive();
+            int pendingReservations = _reservationManager.CountPending();
+            decimal revenueToday = _billingManager.SumInvoicedToday();
+
             // Cards
-            AddCard("Today's Pickups", "6", Color.FromArgb(21, 32, 43));
-            AddCard("Today's Returns", "3", Color.FromArgb(21, 32, 43));
-            AddCard("Fleet Available", "20", Color.FromArgb(21, 32, 43));
-            AddCard("Overdue Return", "1", Color.Red);
-            AddCard("Active Rentals", "20", Color.FromArgb(21, 32, 43));
-            AddCard("Pending Reservations", "2", Color.FromArgb(21, 32, 43));
-            AddCard("Revenue Today", "₱10.5k", Color.LimeGreen);
+            AddCard("Today's Pickups", todayPickups.ToString(), Color.FromArgb(21, 32, 43));
+            AddCard("Today's Returns", todayReturns.ToString(), Color.FromArgb(21, 32, 43));
+            AddCard("Fleet Available", fleetAvailable.ToString(), Color.FromArgb(21, 32, 43));
+            AddCard("Active Rentals", activeRentals.ToString(), Color.FromArgb(21, 32, 43));
+            AddCard("Pending Reservations", pendingReservations.ToString(), Color.FromArgb(21, 32, 43));
+            AddCard("Revenue Today", "₱" + (revenueToday / 1000m).ToString("N1") + "k", Color.LimeGreen);
             
             //AddQuickActions();
         }

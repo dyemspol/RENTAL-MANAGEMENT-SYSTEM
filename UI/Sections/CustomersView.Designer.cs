@@ -19,7 +19,6 @@ namespace RentalApp.UI.Sections
             this.filterComboBox = new System.Windows.Forms.ComboBox();
             this.filterLabel = new System.Windows.Forms.Label();
             this.customersGrid = new System.Windows.Forms.DataGridView();
-            this.viewProfileButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.customersGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,10 +43,11 @@ namespace RentalApp.UI.Sections
             "Frequent renters",
             "Corporate clients",
             "Blacklisted"});
-            this.filterComboBox.Location = new System.Drawing.Point(60, 39);
+            this.filterComboBox.Location = new System.Drawing.Point(70, 40);
             this.filterComboBox.Name = "filterComboBox";
             this.filterComboBox.Size = new System.Drawing.Size(172, 23);
             this.filterComboBox.TabIndex = 2;
+            this.filterComboBox.SelectedIndexChanged += new System.EventHandler(this.filterComboBox_SelectedIndexChanged);
             // 
             // filterLabel
             // 
@@ -78,27 +78,11 @@ namespace RentalApp.UI.Sections
             this.customersGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customersGrid_CellContentClick);
             this.customersGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customersGrid_CellContentDoubleClick);
             // 
-            // viewProfileButton
-            // 
-            this.viewProfileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.viewProfileButton.BackColor = System.Drawing.Color.White;
-            this.viewProfileButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.viewProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewProfileButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.viewProfileButton.ForeColor = System.Drawing.Color.DimGray;
-            this.viewProfileButton.Location = new System.Drawing.Point(579, 39);
-            this.viewProfileButton.Name = "viewProfileButton";
-            this.viewProfileButton.Size = new System.Drawing.Size(63, 20);
-            this.viewProfileButton.TabIndex = 5;
-            this.viewProfileButton.Text = "View";
-            this.viewProfileButton.UseVisualStyleBackColor = false;
-            // 
             // CustomersView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.viewProfileButton);
             this.Controls.Add(this.customersGrid);
             this.Controls.Add(this.filterComboBox);
             this.Controls.Add(this.filterLabel);
@@ -115,7 +99,6 @@ namespace RentalApp.UI.Sections
         private System.Windows.Forms.ComboBox filterComboBox;
         private System.Windows.Forms.Label filterLabel;
         private System.Windows.Forms.DataGridView customersGrid;
-        private System.Windows.Forms.Button viewProfileButton;
     }
 }
 

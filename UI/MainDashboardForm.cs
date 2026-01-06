@@ -4,6 +4,7 @@ using System.IO;
 using System.Drawing;
 using RentalApp.UI.Sections;
 using RentalApp.Models.Services;
+using RentalApp.Models.Users;
 
 
 namespace RentalApp.UI
@@ -11,18 +12,19 @@ namespace RentalApp.UI
     public partial class MainDashboardForm : Form
     {
         private UserControl currentView;
-
-        public MainDashboardForm()
+        private User _user;
+        public MainDashboardForm(User user)
         {
             InitializeComponent();
+            _user = user;
             // Default to Dashboard
             sectionTitleLabel.Visible = false;
             cardsTableLayout.Visible = false;
             placeholderLabel.Visible = false;
-            
+            userRoleLabel.Text = $"Signed in as: {user.GetRoleName()}";
             contentPanel.Location = new Point(23, 20);
             contentPanel.Size = new Size(1497, 806);
-            
+
             ShowSection(new DashboardView());
             InitializeDragAndDrop();
         }
@@ -72,7 +74,8 @@ namespace RentalApp.UI
         private VehicleManager _vehicleManager = new VehicleManager();
         private CustomerManager _customerManager = new CustomerManager();
         private ReservationManager _reservationManager = new ReservationManager();
-        // private RentalManager _rentalManager = new RentalManager(); // Uncomment when ready
+        private RentalManager _rentalManager = new RentalManager();
+        private BillingManager _billingManager = new BillingManager();
 
         private void navButton_Click(object sender, EventArgs e)
         {
@@ -167,7 +170,7 @@ namespace RentalApp.UI
                 else if (section == "Reservations")
                 {
                     cardFleetLabel.Text = "Total Reservations";
-                    cardFleetValue.Text = _reservationManager.GetAllReservations().Count.ToString();
+                    cardFleetValue.Text = _reservationManager.CountTotal().ToString();
 
                     cardActiveRentalsLabel.Text = "Pending";
                     cardActiveRentalsValue.Text = _reservationManager.CountPending().ToString();
@@ -178,29 +181,29 @@ namespace RentalApp.UI
                 else if (section == "Pickups")
                 {
                     cardFleetLabel.Text = "Today's Pickups";
-                    cardFleetValue.Text = "5"; // Placeholder
-                    cardActiveRentalsLabel.Text = "Pending";
-                    cardActiveRentalsValue.Text = "2"; // Placeholder
-                    cardRevenueLabel.Text = "Completed";
-                    cardRevenueValue.Text = "3"; // Placeholder
+                    cardFleetValue.Text = _rentalManager.CountTodayPickups().ToString();
+                    cardActiveRentalsLabel.Text = "Pending Reservations";
+                    cardActiveRentalsValue.Text = _reservationManager.CountPending().ToString();
+                    cardRevenueLabel.Text = "Active Rentals";
+                    cardRevenueValue.Text = _rentalManager.CountActive().ToString();
                 }
                 else if (section == "Returns")
                 {
                     cardFleetLabel.Text = "Pending Returns";
-                    cardFleetValue.Text = "3"; // Placeholder
+                    cardFleetValue.Text = _rentalManager.CountPendingReturns().ToString();
                     cardActiveRentalsLabel.Text = "Inspections Due";
-                    cardActiveRentalsValue.Text = "1"; // Placeholder
+                    cardActiveRentalsValue.Text = _rentalManager.CountPendingReturns().ToString();; // Placeholder
                     cardRevenueLabel.Text = "Processed";
-                    cardRevenueValue.Text = "2"; // Placeholder
+                    cardRevenueValue.Text = _rentalManager.CountCompleted().ToString(); 
                 }
                 else if (section == "Billing")
                 {
-                    cardFleetLabel.Text = "Outstanding";
-                    cardFleetValue.Text = "$4,320"; // Placeholder
+                    cardFleetLabel.Text = "Transactions Today";
+                    cardFleetValue.Text = _billingManager.CountToday().ToString();
                     cardActiveRentalsLabel.Text = "Invoiced Today";
-                    cardActiveRentalsValue.Text = "$1,250"; // Placeholder
+                    cardActiveRentalsValue.Text = _billingManager.SumInvoicedToday().ToString();
                     cardRevenueLabel.Text = "Paid Today";
-                    cardRevenueValue.Text = "$850"; // Placeholder
+                    cardRevenueValue.Text = _billingManager.CountToday().ToString();
                 }
                 else if (section == "Reports")
                 {
@@ -215,11 +218,11 @@ namespace RentalApp.UI
                 {
                     // Default / Dashboard
                     cardFleetLabel.Text = "Total Fleet";
-                    cardFleetValue.Text = "128";
+                    cardFleetValue.Text = _vehicleManager.GetAllVehicles().Count.ToString();
                     cardActiveRentalsLabel.Text = "Active Rentals";
-                    cardActiveRentalsValue.Text = "27";
+                    cardActiveRentalsValue.Text = _rentalManager.CountActive().ToString();
                     cardRevenueLabel.Text = "Revenue";
-                    cardRevenueValue.Text = "$12,450";
+                    cardRevenueValue.Text = _billingManager.SumRevenue().ToString();
                 }
             }
             catch (Exception ex)
