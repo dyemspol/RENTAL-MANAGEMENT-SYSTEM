@@ -88,7 +88,46 @@ namespace RentalApp.Data.Repositories
         public List<Invoice> GetUnpaid()
         {
             List<Invoice> invoices = new List<Invoice>();
-            string sql = "SELECT * FROM Invoices WHERE IsPaid = FALSE";
+            string sql = @"SELECT i.*, 
+                                  CONCAT(c.FirstName, ' ', c.LastName) as CustomerName,
+                                  CONCAT(v.Make, ' ', v.Model, ' (', v.Year, ')') as VehicleInfo,
+                                  CONCAT(u.Firstname, ' ', u.Lastname) as AgentName
+                           FROM Invoices i
+                           LEFT JOIN Rentals r ON i.RentalID = r.ID
+                           LEFT JOIN Customers c ON r.CustomerID = c.ID
+                           LEFT JOIN Vehicles v ON r.VehicleID = v.ID
+                           LEFT JOIN Users u ON r.RentalAgentId = u.ID
+                           WHERE i.IsPaid = FALSE";
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            invoices.Add(MapReaderToInvoice(reader));
+                        }
+                    }
+                }
+            }
+            return invoices;
+        }
+        public List<Invoice> GetAllPaid()
+        {
+            List<Invoice> invoices = new List<Invoice>();
+            string sql = @"SELECT i.*, 
+                                  CONCAT(c.FirstName, ' ', c.LastName) as CustomerName,
+                                  CONCAT(v.Make, ' ', v.Model, ' (', v.Year, ')') as VehicleInfo,
+                                  CONCAT(u.Firstname, ' ', u.Lastname) as AgentName
+                           FROM Invoices i
+                           LEFT JOIN Rentals r ON i.RentalID = r.ID
+                           LEFT JOIN Customers c ON r.CustomerID = c.ID
+                           LEFT JOIN Vehicles v ON r.VehicleID = v.ID
+                           LEFT JOIN Users u ON r.RentalAgentId = u.ID
+                           WHERE i.IsPaid = TRUE";
 
             using (var conn = DatabaseHelper.GetConnection())
             {
@@ -146,29 +185,29 @@ namespace RentalApp.Data.Repositories
                 }
             }
         }
-        public int SumInvoicedToday()
+        public decimal SumInvoicedToday()
         {
-            string sql = "SELECT SUM(TotalAmount) FROM Invoices WHERE DATE(IssueDate) = CURDATE() AND IsPaid = TRUE";
+            string sql = "SELECT IFNULL(SUM(TotalAmount), 0) FROM Invoices WHERE DATE(IssueDate) = CURDATE() AND IsPaid = TRUE";
 
             using (var conn = DatabaseHelper.GetConnection())
             {
                 conn.Open();
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
-                    return Convert.ToInt32(cmd.ExecuteScalar());
+                    return Convert.ToDecimal(cmd.ExecuteScalar());
                 }
             }
         }
-        public int SumRevenue()
+        public decimal SumRevenue()
         {
-            string sql = "SELECT SUM(TotalAmount) FROM Invoices WHERE IsPaid = TRUE";
+            string sql = "SELECT IFNULL(SUM(TotalAmount), 0) FROM Invoices WHERE IsPaid = TRUE";
 
             using (var conn = DatabaseHelper.GetConnection())
             {
                 conn.Open();
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
-                    return Convert.ToInt32(cmd.ExecuteScalar());
+                    return Convert.ToDecimal(cmd.ExecuteScalar());
                 }
             }
         }
@@ -176,7 +215,7 @@ namespace RentalApp.Data.Repositories
         // HELPER
         private Invoice MapReaderToInvoice(MySqlDataReader reader)
         {
-            return new Invoice
+            var invoice = new Invoice
             {
                 Id = reader.GetInt32("ID"),
                 RentalId = reader.GetInt32("RentalID"),
@@ -190,6 +229,22 @@ namespace RentalApp.Data.Repositories
                 TotalAmount = reader.GetDecimal("TotalAmount"),
                 IsPaid = reader.GetBoolean("IsPaid")
             };
+
+            // Map Extra Fields from JOINs if they exist
+            try
+            {
+                if (!reader.IsDBNull(reader.GetOrdinal("CustomerName")))
+                    invoice.CustomerName = reader.GetString("CustomerName");
+                
+                if (!reader.IsDBNull(reader.GetOrdinal("VehicleInfo")))
+                    invoice.VehicleInfo = reader.GetString("VehicleInfo");
+                
+                if (!reader.IsDBNull(reader.GetOrdinal("AgentName")))
+                    invoice.RentalAgentName = reader.GetString("AgentName");
+            }
+            catch { /* Columns not in result set */ }
+
+            return invoice;
         }
         
     }

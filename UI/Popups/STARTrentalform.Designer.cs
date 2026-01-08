@@ -41,6 +41,8 @@
             this.rsvtnID = new MaterialSkin.Controls.MaterialLabel();
             this.vehicletxt = new MaterialSkin.Controls.MaterialLabel();
             this.txtcstmr = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.expectreturndt = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // strtbtn
@@ -51,7 +53,7 @@
             this.strtbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.strtbtn.Depth = 0;
             this.strtbtn.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.strtbtn.Location = new System.Drawing.Point(156, 167);
+            this.strtbtn.Location = new System.Drawing.Point(152, 203);
             this.strtbtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.strtbtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.strtbtn.Name = "strtbtn";
@@ -67,7 +69,7 @@
             this.cnclbttn.AutoSize = true;
             this.cnclbttn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.cnclbttn.Depth = 0;
-            this.cnclbttn.Location = new System.Drawing.Point(342, 167);
+            this.cnclbttn.Location = new System.Drawing.Point(340, 203);
             this.cnclbttn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.cnclbttn.MouseState = MaterialSkin.MouseState.HOVER;
             this.cnclbttn.Name = "cnclbttn";
@@ -145,9 +147,9 @@
             // 
             // pickupdt
             // 
-            this.pickupdt.Location = new System.Drawing.Point(169, 106);
+            this.pickupdt.Location = new System.Drawing.Point(128, 105);
             this.pickupdt.Name = "pickupdt";
-            this.pickupdt.Size = new System.Drawing.Size(96, 20);
+            this.pickupdt.Size = new System.Drawing.Size(178, 20);
             this.pickupdt.TabIndex = 8;
             this.pickupdt.ValueChanged += new System.EventHandler(this.pickupdt_ValueChanged);
             // 
@@ -160,14 +162,15 @@
             this.materialLabel6.Location = new System.Drawing.Point(12, 106);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(151, 19);
+            this.materialLabel6.Size = new System.Drawing.Size(110, 19);
             this.materialLabel6.TabIndex = 9;
-            this.materialLabel6.Text = "STARTING MILEAGE:";
+            this.materialLabel6.Text = "PICK-UP DATE:";
             // 
             // lblmileage
             // 
             this.lblmileage.Location = new System.Drawing.Point(437, 63);
             this.lblmileage.Name = "lblmileage";
+            this.lblmileage.ReadOnly = true;
             this.lblmileage.Size = new System.Drawing.Size(129, 20);
             this.lblmileage.TabIndex = 11;
             this.lblmileage.TextChanged += new System.EventHandler(this.lblmileage_TextChanged);
@@ -214,11 +217,34 @@
             this.txtcstmr.Text = "JOSHUA GARCIA";
             this.txtcstmr.Click += new System.EventHandler(this.materialLabel8_Click);
             // 
+            // materialLabel7
+            // 
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Depth = 0;
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel7.Location = new System.Drawing.Point(12, 142);
+            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(190, 19);
+            this.materialLabel7.TabIndex = 15;
+            this.materialLabel7.Text = "EXPECTED RETURN DATE:";
+            // 
+            // expectreturndt
+            // 
+            this.expectreturndt.Location = new System.Drawing.Point(199, 140);
+            this.expectreturndt.Name = "expectreturndt";
+            this.expectreturndt.Size = new System.Drawing.Size(178, 20);
+            this.expectreturndt.TabIndex = 16;
+            this.expectreturndt.ValueChanged += new System.EventHandler(this.expectreturndt_ValueChanged);
+            // 
             // STARTrentalform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 214);
+            this.ClientSize = new System.Drawing.Size(584, 254);
+            this.Controls.Add(this.expectreturndt);
+            this.Controls.Add(this.materialLabel7);
             this.Controls.Add(this.txtcstmr);
             this.Controls.Add(this.vehicletxt);
             this.Controls.Add(this.rsvtnID);
@@ -254,5 +280,7 @@
         private MaterialSkin.Controls.MaterialLabel rsvtnID;
         private MaterialSkin.Controls.MaterialLabel vehicletxt;
         private MaterialSkin.Controls.MaterialLabel txtcstmr;
+        private MaterialSkin.Controls.MaterialLabel materialLabel7;
+        private System.Windows.Forms.DateTimePicker expectreturndt;
     }
 }

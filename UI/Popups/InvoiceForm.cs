@@ -187,6 +187,151 @@ namespace RentalApp.UI.Popups
         private void textBox1_TextChanged(object sender, EventArgs e) { }
         private void textBox2_TextChanged(object sender, EventArgs e) { }
         private void materialLabel15_Click(object sender, EventArgs e) { }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void materialLabel1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbPM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtFC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAR_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btcancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel15_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel14_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

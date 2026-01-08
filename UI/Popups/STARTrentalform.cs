@@ -29,6 +29,7 @@
                 _vehiclemanager = new VehicleManager();
                 _reservationmanager = new ReservationManager();
                 loadcustemerdata(); 
+                ConfigureDatePickers();
             }
 
             private void strtbtn_Click(object sender, EventArgs e)
@@ -48,6 +49,14 @@
                     RentalAgentId = Session.CurrentUserId,
                     Status = RentalStatus.Active
                 };
+
+                // Safety check: Ensure no active rental already exists
+                if (_rentalmanager.HasActiveRental(reservation.CustomerId))
+                {
+                    MessageBox.Show("This customer already has an active rental in the system. Please complete the existing rental before starting a new one.", 
+                        "Active Rental Detected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
                 try
                 {
@@ -89,13 +98,14 @@
 
             }
 
-            private void loadcustemerdata ()
+            private void loadcustemerdata()
             {
                 this.Text = "Customer Details";
                 rsvtnID.Text = reservation.Id.ToString();
-
+                
                 txtcstmr.Text = reservation.CustomerName;
                 vehicletxt.Text = reservation.VehicleInfo;
+                expectreturndt.Value = reservation.EndDate;
 
                 var vehicle = _vehiclemanager.GetVehicleById(reservation.VehicleId);
                 if (vehicle != null)
@@ -103,7 +113,18 @@
                     lblmileage.Text = vehicle.Mileage.ToString(); 
                     lblmileage.ReadOnly = true;
                 }
+            }
 
+            private void ConfigureDatePickers()
+            {
+                
+                expectreturndt.Enabled = false;
+                expectreturndt.Format = DateTimePickerFormat.Custom;
+                expectreturndt.CustomFormat = "MM/dd/yyyy hh:mm tt";
+
+                
+                pickupdt.Format = DateTimePickerFormat.Custom;
+                pickupdt.CustomFormat = "MM/dd/yyyy hh:mm tt";
             }
 
             private void pickupdt_ValueChanged(object sender, EventArgs e)
@@ -117,6 +138,11 @@
             }
 
         private void cnclbttn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void expectreturndt_ValueChanged(object sender, EventArgs e)
         {
 
         }

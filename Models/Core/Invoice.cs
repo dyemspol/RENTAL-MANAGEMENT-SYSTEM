@@ -17,6 +17,11 @@ namespace RentalApp.Models.Core
         public decimal TotalAmount { get; set; }
         public bool IsPaid { get; set; }
 
+        // Display Properties for Grid Binding
+        public string CustomerName { get; set; }
+        public string VehicleInfo { get; set; }
+        public string RentalAgentName { get; set; }
+
         // Navigation property
         public Rental Rental { get; set; }
 

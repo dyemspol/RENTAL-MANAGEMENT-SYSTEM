@@ -188,6 +188,12 @@
     <Compile Include="UI\Popups\STARTrentalform.Designer.cs">
       <DependentUpon>STARTrentalform.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Popups\WalkInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Popups\WalkInForm.Designer.cs">
+      <DependentUpon>WalkInForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Sections\VehiclesView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Popups\STARTrentalform.resx">
       <DependentUpon>STARTrentalform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Popups\WalkInForm.resx">
+      <DependentUpon>WalkInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Sections\BillingView.resx">
       <DependentUpon>BillingView.cs</DependentUpon>

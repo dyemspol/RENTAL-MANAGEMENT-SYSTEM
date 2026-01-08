@@ -286,7 +286,6 @@ namespace RentalApp.UI
             this.userRoleLabel.Size = new System.Drawing.Size(144, 15);
             this.userRoleLabel.TabIndex = 1;
             this.userRoleLabel.Text = "Signed in as: Rental Agent";
-            
             // 
             // mainPanel
             // 
@@ -301,6 +300,7 @@ namespace RentalApp.UI
             this.mainPanel.Padding = new System.Windows.Forms.Padding(20);
             this.mainPanel.Size = new System.Drawing.Size(1543, 846);
             this.mainPanel.TabIndex = 2;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // contentPanel
             // 

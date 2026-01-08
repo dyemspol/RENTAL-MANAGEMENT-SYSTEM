@@ -21,6 +21,10 @@ namespace RentalApp.UI.Sections
             LoadReservations();
             
             InitializeDragAndDrop();
+            
+            // Hook up date range filters
+            dtpFROM.ValueChanged += (s, e) => LoadReservations();
+            dtpTO.ValueChanged += (s, e) => LoadReservations();
         }
 
         private void InitializeDragAndDrop()
@@ -62,15 +66,24 @@ namespace RentalApp.UI.Sections
 
         private void LoadReservations()
         {
-            try{
-                var reservations = _reservationManager.GetConfirmed();
+            try {
+                DateTime fromDate = dtpFROM.Value;
+                DateTime toDate = dtpTO.Value;
+
+                if (fromDate > toDate)
+                {
+                    MessageBox.Show("Error: From Date cannot be greater than To Date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; 
+                }
+
+                var reservations = _reservationManager.GetByDateRange(fromDate, toDate);
+                
                 var bindingSource = new BindingSource();
                 bindingSource.DataSource = reservations;
 
                 reservationsGrid.AutoGenerateColumns = true;
                 reservationsGrid.DataSource = bindingSource;
 
-                // Configure Columns Programmatically
                 if (reservationsGrid.Columns["Id"] != null) reservationsGrid.Columns["Id"].Visible = false;
                 if (reservationsGrid.Columns["CustomerId"] != null) reservationsGrid.Columns["CustomerId"].Visible = false;
                 if (reservationsGrid.Columns["VehicleId"] != null) reservationsGrid.Columns["VehicleId"].Visible = false;
@@ -78,7 +91,7 @@ namespace RentalApp.UI.Sections
                 if (reservationsGrid.Columns["Customer"] != null) reservationsGrid.Columns["Customer"].Visible = false;
                 if (reservationsGrid.Columns["Vehicle"] != null) reservationsGrid.Columns["Vehicle"].Visible = false;
 
-                // Rename Headers for Display Properties
+            
                 if (reservationsGrid.Columns["CustomerName"] != null) 
                 {
                     reservationsGrid.Columns["CustomerName"].HeaderText = "Customer";
@@ -89,8 +102,9 @@ namespace RentalApp.UI.Sections
                     reservationsGrid.Columns["VehicleInfo"].HeaderText = "Vehicle";
                     reservationsGrid.Columns["VehicleInfo"].DisplayIndex = 1;
                 }
-                if (reservationsGrid.Columns["StartDate"] != null) reservationsGrid.Columns["StartDate"].HeaderText = "From";
-                if (reservationsGrid.Columns["EndDate"] != null) reservationsGrid.Columns["EndDate"].HeaderText = "To";
+                if (reservationsGrid.Columns["StartDate"] != null) reservationsGrid.Columns["StartDate"].HeaderText = "From Date";
+                if (reservationsGrid.Columns["EndDate"] != null) reservationsGrid.Columns["EndDate"].HeaderText = "To Date";
+                if (reservationsGrid.Columns["Status"] != null) reservationsGrid.Columns["Status"].HeaderText = "Status";
 
                 reservationsGrid.Refresh();
                 

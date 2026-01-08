@@ -131,7 +131,42 @@ namespace RentalApp.Data.Repositories
             }
             return rentals;
         }
+        public List<Rental> GetByDateRange(DateTime start, DateTime end)
+        {
+            List<Rental> rentals = new List<Rental>();
+            string sql = @"SELECT r.*, 
+                                  c.FirstName, c.LastName, 
+                                  v.Make, v.Model, v.Year,
+                                  r.RentalAgentId,
+                                  ra.Firstname as RentalAgentFirstName,
+                                  ra.Lastname as RentalAgentLastName,
+                                  ra.Role as RentalAgentRole
+                           FROM Rentals r
+                           LEFT JOIN Customers c ON r.CustomerID = c.ID
+                           LEFT JOIN Vehicles v ON r.VehicleID = v.ID
+                           LEFT JOIN Users ra ON r.RentalAgentId = ra.ID
+                           WHERE r.ActualPickupDate >= @start AND r.ActualPickupDate <= @end
+                           ORDER BY r.ActualPickupDate DESC";
 
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@start", start.Date);
+                    cmd.Parameters.AddWithValue("@end", end.Date.AddDays(1).AddSeconds(-1));
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            rentals.Add(MapReaderToRental(reader));
+                        }
+                    }
+                }
+            }
+            return rentals;
+        }   
         // UPDATE
         public void Update(Rental rental)
         {
@@ -220,6 +255,21 @@ namespace RentalApp.Data.Repositories
                 conn.Open();
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+
+        public int GetActiveRentalCount(int customerId)
+        {
+            string sql = "SELECT COUNT(*) FROM Rentals WHERE CustomerID = @custId AND Status = 'Active'";
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@custId", customerId);
                     return Convert.ToInt32(cmd.ExecuteScalar());
                 }
             }

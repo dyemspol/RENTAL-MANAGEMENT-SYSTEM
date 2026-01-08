@@ -1,4 +1,4 @@
-﻿namespace RentalApp.UI.Popups
+namespace RentalApp.UI.Popups
 {
     partial class PickupForm
     {

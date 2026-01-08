@@ -43,6 +43,7 @@
             this.customergrid = new System.Windows.Forms.DataGridView();
             this.btblacklist = new MaterialSkin.Controls.MaterialFlatButton();
             this.btclose = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.customergrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.txtname.Depth = 0;
             this.txtname.Font = new System.Drawing.Font("Roboto", 11F);
             this.txtname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtname.Location = new System.Drawing.Point(12, 9);
+            this.txtname.Location = new System.Drawing.Point(13, 78);
             this.txtname.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(83, 19);
@@ -66,7 +67,7 @@
             this.txtlastname.Depth = 0;
             this.txtlastname.Font = new System.Drawing.Font("Roboto", 11F);
             this.txtlastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtlastname.Location = new System.Drawing.Point(187, 9);
+            this.txtlastname.Location = new System.Drawing.Point(188, 78);
             this.txtlastname.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.Size = new System.Drawing.Size(75, 19);
@@ -80,12 +81,12 @@
             this.txt.Depth = 0;
             this.txt.Font = new System.Drawing.Font("Roboto", 11F);
             this.txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt.Location = new System.Drawing.Point(13, 98);
+            this.txt.Location = new System.Drawing.Point(13, 111);
             this.txt.MouseState = MaterialSkin.MouseState.HOVER;
             this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(64, 19);
+            this.txt.Size = new System.Drawing.Size(76, 19);
             this.txt.TabIndex = 2;
-            this.txt.Text = "Address";
+            this.txt.Text = "Address : ";
             this.txt.Click += new System.EventHandler(this.txt_Click);
             // 
             // txtaddress
@@ -94,7 +95,7 @@
             this.txtaddress.Depth = 0;
             this.txtaddress.Font = new System.Drawing.Font("Roboto", 11F);
             this.txtaddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtaddress.Location = new System.Drawing.Point(99, 98);
+            this.txtaddress.Location = new System.Drawing.Point(82, 111);
             this.txtaddress.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.Size = new System.Drawing.Size(126, 19);
@@ -108,12 +109,12 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(12, 146);
+            this.materialLabel1.Location = new System.Drawing.Point(13, 148);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(169, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(177, 19);
             this.materialLabel1.TabIndex = 4;
-            this.materialLabel1.Text = "Drivers License Number";
+            this.materialLabel1.Text = "Drivers License Number :";
             this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click_1);
             // 
             // materialLabel2
@@ -122,12 +123,12 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(206, 146);
+            this.materialLabel2.Location = new System.Drawing.Point(211, 148);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(80, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(88, 19);
             this.materialLabel2.TabIndex = 5;
-            this.materialLabel2.Text = "Date Issue";
+            this.materialLabel2.Text = "Date Issue :";
             this.materialLabel2.Click += new System.EventHandler(this.materialLabel2_Click);
             // 
             // materialLabel3
@@ -136,12 +137,12 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(337, 146);
+            this.materialLabel3.Location = new System.Drawing.Point(342, 148);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(85, 19);
+            this.materialLabel3.Size = new System.Drawing.Size(89, 19);
             this.materialLabel3.TabIndex = 6;
-            this.materialLabel3.Text = "Date Expire";
+            this.materialLabel3.Text = "Date Expire:";
             this.materialLabel3.Click += new System.EventHandler(this.materialLabel3_Click);
             // 
             // dlnumber
@@ -150,7 +151,7 @@
             this.dlnumber.Depth = 0;
             this.dlnumber.Font = new System.Drawing.Font("Roboto", 11F);
             this.dlnumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dlnumber.Location = new System.Drawing.Point(12, 178);
+            this.dlnumber.Location = new System.Drawing.Point(13, 180);
             this.dlnumber.MouseState = MaterialSkin.MouseState.HOVER;
             this.dlnumber.Name = "dlnumber";
             this.dlnumber.Size = new System.Drawing.Size(113, 19);
@@ -164,7 +165,7 @@
             this.dlissuedate.Depth = 0;
             this.dlissuedate.Font = new System.Drawing.Font("Roboto", 11F);
             this.dlissuedate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dlissuedate.Location = new System.Drawing.Point(206, 178);
+            this.dlissuedate.Location = new System.Drawing.Point(211, 180);
             this.dlissuedate.MouseState = MaterialSkin.MouseState.HOVER;
             this.dlissuedate.Name = "dlissuedate";
             this.dlissuedate.Size = new System.Drawing.Size(81, 19);
@@ -178,7 +179,7 @@
             this.dlexpiredate.Depth = 0;
             this.dlexpiredate.Font = new System.Drawing.Font("Roboto", 11F);
             this.dlexpiredate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dlexpiredate.Location = new System.Drawing.Point(341, 178);
+            this.dlexpiredate.Location = new System.Drawing.Point(346, 180);
             this.dlexpiredate.MouseState = MaterialSkin.MouseState.HOVER;
             this.dlexpiredate.Name = "dlexpiredate";
             this.dlexpiredate.Size = new System.Drawing.Size(81, 19);
@@ -192,7 +193,7 @@
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(12, 234);
+            this.materialLabel4.Location = new System.Drawing.Point(13, 219);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(104, 19);
@@ -210,9 +211,9 @@
             // customergrid
             // 
             this.customergrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customergrid.Location = new System.Drawing.Point(18, 262);
+            this.customergrid.Location = new System.Drawing.Point(17, 251);
             this.customergrid.Name = "customergrid";
-            this.customergrid.Size = new System.Drawing.Size(403, 131);
+            this.customergrid.Size = new System.Drawing.Size(407, 131);
             this.customergrid.TabIndex = 11;
             this.customergrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customergrid_CellContentClick);
             this.customergrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customergrid_CellContentDoubleClick);
@@ -222,7 +223,7 @@
             this.btblacklist.AutoSize = true;
             this.btblacklist.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btblacklist.Depth = 0;
-            this.btblacklist.Location = new System.Drawing.Point(18, 402);
+            this.btblacklist.Location = new System.Drawing.Point(107, 432);
             this.btblacklist.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btblacklist.MouseState = MaterialSkin.MouseState.HOVER;
             this.btblacklist.Name = "btblacklist";
@@ -238,7 +239,7 @@
             this.btclose.AutoSize = true;
             this.btclose.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btclose.Depth = 0;
-            this.btclose.Location = new System.Drawing.Point(338, 402);
+            this.btclose.Location = new System.Drawing.Point(238, 432);
             this.btclose.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btclose.MouseState = MaterialSkin.MouseState.HOVER;
             this.btclose.Name = "btclose";
@@ -249,11 +250,25 @@
             this.btclose.UseVisualStyleBackColor = true;
             this.btclose.Click += new System.EventHandler(this.btclose_Click);
             // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(12, 9);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(209, 29);
+            this.materialLabel5.TabIndex = 14;
+            this.materialLabel5.Text = "Customer Details";
+            // 
             // CustomerDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 450);
+            this.ClientSize = new System.Drawing.Size(452, 483);
+            this.Controls.Add(this.materialLabel5);
             this.Controls.Add(this.btclose);
             this.Controls.Add(this.btblacklist);
             this.Controls.Add(this.customergrid);
@@ -294,5 +309,6 @@
         private System.Windows.Forms.DataGridView customergrid;
         private MaterialSkin.Controls.MaterialFlatButton btblacklist;
         private MaterialSkin.Controls.MaterialFlatButton btclose;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
     }
 }

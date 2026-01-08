@@ -18,6 +18,7 @@ namespace RentalApp.UI.Popups
             _customer = customer;
             _customerManager = new CustomerManager();
             _reservationManager = new ReservationManager();
+            customergrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             LoadCustomerData();
         }
@@ -30,7 +31,7 @@ namespace RentalApp.UI.Popups
             // Populate Labels
             txtname.Text = _customer.FirstName;
             txtlastname.Text = _customer.LastName;
-            txtaddress.Text = _customer.Address; // Assuming Address property exists
+            txtaddress.Text = _customer.Address; 
             
             // Driver's License Info
             dlnumber.Text = _customer.DriverLicenseNumber;
@@ -70,6 +71,9 @@ namespace RentalApp.UI.Popups
                 if (customergrid.Columns["CustomerId"] != null) customergrid.Columns["CustomerId"].Visible = false;
                 if (customergrid.Columns["VehicleId"] != null) customergrid.Columns["VehicleId"].Visible = false;
                 if (customergrid.Columns["Id"] != null) customergrid.Columns["Id"].Visible = false;
+
+                if (customergrid.Columns["CustomerName"] != null) customergrid.Columns["CustomerName"].HeaderText = "Customer Name";
+                if (customergrid.Columns["VehicleInfo"] != null) customergrid.Columns["VehicleInfo"].HeaderText = "Rented Vehicles";
                 
             }
             catch (Exception ex)

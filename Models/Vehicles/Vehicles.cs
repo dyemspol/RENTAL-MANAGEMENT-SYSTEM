@@ -44,6 +44,8 @@ namespace RentalApp.Models.Vehicles
         public TransmissionType Transmission { get; set; }
         public int SeatingCapacity { get; set; }
         public string ImageUrl { get; set; }
+        public string VehicleName => GetDisplayName();
+        public string VehicleType => GetVehicleType();
         public System.Collections.Generic.List<string> Features { get; set; } = new System.Collections.Generic.List<string>();
 
         protected Vehicle() { }

@@ -50,6 +50,8 @@
             this.txtlicensestate = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cmbcustomertype = new System.Windows.Forms.ComboBox();
+            this.addbt = new System.Windows.Forms.Button();
+            this.cancelbt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dafas
@@ -79,7 +81,6 @@
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.Size = new System.Drawing.Size(158, 20);
             this.txtfirstname.TabIndex = 3;
-            this.txtfirstname.Text = "q";
             this.txtfirstname.TextChanged += new System.EventHandler(this.txtfirstname_TextChanged);
             // 
             // textxtlastname
@@ -254,11 +255,32 @@
             this.cmbcustomertype.TabIndex = 22;
             this.cmbcustomertype.SelectedIndexChanged += new System.EventHandler(this.cmbcustomertype_SelectedIndexChanged);
             // 
+            // addbt
+            // 
+            this.addbt.Location = new System.Drawing.Point(132, 315);
+            this.addbt.Name = "addbt";
+            this.addbt.Size = new System.Drawing.Size(133, 37);
+            this.addbt.TabIndex = 23;
+            this.addbt.Text = "ADD";
+            this.addbt.UseVisualStyleBackColor = true;
+            this.addbt.Click += new System.EventHandler(this.addbt_Click);
+            // 
+            // cancelbt
+            // 
+            this.cancelbt.Location = new System.Drawing.Point(287, 315);
+            this.cancelbt.Name = "cancelbt";
+            this.cancelbt.Size = new System.Drawing.Size(133, 37);
+            this.cancelbt.TabIndex = 24;
+            this.cancelbt.Text = "CANCEL";
+            this.cancelbt.UseVisualStyleBackColor = true;
+            // 
             // AddnewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 341);
+            this.ClientSize = new System.Drawing.Size(587, 364);
+            this.Controls.Add(this.cancelbt);
+            this.Controls.Add(this.addbt);
             this.Controls.Add(this.cmbcustomertype);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtlicensestate);
@@ -313,5 +335,7 @@
         private System.Windows.Forms.TextBox txtlicensestate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbcustomertype;
+        private System.Windows.Forms.Button addbt;
+        private System.Windows.Forms.Button cancelbt;
     }
 }

@@ -129,6 +129,34 @@ namespace RentalApp.Data.Repositories
             return customers;
         }
 
+        public List<Customer> GetAvailableCustomers()
+        {
+            List<Customer> customers = new List<Customer>();
+
+            string sql = @"
+                SELECT * FROM Customers c
+                WHERE c.IsBlacklisted = 0
+                AND c.ID NOT IN (SELECT CustomerID FROM Rentals WHERE Status = 'Active')
+                AND c.ID NOT IN (SELECT CustomerID FROM Reservations WHERE Status IN ('Pending', 'Confirmed'))
+                ORDER BY FirstName, LastName";
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            customers.Add(MapReaderToCustomer(reader));
+                        }
+                    }
+                }
+            }
+            return customers;
+        }
+
         // UPDATE
         public void Update(Customer customer)
         {

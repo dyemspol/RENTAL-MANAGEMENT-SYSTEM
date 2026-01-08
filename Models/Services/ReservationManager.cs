@@ -68,6 +68,11 @@ namespace RentalApp.Models.Services
             return _reservationRepository.GetConfirmed();
         }
 
+        public List<Reservation> GetByDateRange(DateTime start, DateTime end)
+        {
+            return _reservationRepository.GetByDateRange(start, end);
+        }
+
         // Update reservation   
         public void UpdateReservation(Reservation reservation)
         {
@@ -97,6 +102,11 @@ namespace RentalApp.Models.Services
         public int CountTotal()
         {
             return _reservationRepository.CountTotal();
+        }
+
+        public bool HasActiveReservation(int customerId)
+        {
+            return _reservationRepository.GetActiveReservationCount(customerId) > 0;
         }
 
     }

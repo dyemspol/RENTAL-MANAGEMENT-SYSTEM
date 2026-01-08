@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RentalApp.Data.Repositories;
+using RentalApp.Models.Core;
 
 namespace RentalApp.Models.Services
 {
@@ -16,20 +17,18 @@ namespace RentalApp.Models.Services
             _rentalRepository = new RentalRepository();
         }
 
-        // Get all rentals
-        public List<RentalApp.Models.Core.Rental> GetAllRentals()
+        public List<Rental> GetAllRentals()
         {
             return _rentalRepository.GetAll();
         }
 
-        // Get only active rentals (currently out with customers)
-        public List<RentalApp.Models.Core.Rental> GetActiveRentals()
+        public List<Rental> GetActiveRentals()
         {
             return _rentalRepository.GetActiveRentals();
         }
 
-        // Start a new rental
-        public void StartRental(RentalApp.Models.Core.Rental rental)
+      
+        public void StartRental(Rental rental)
         {
             // Validation
             if (rental.VehicleId <= 0)
@@ -47,34 +46,26 @@ namespace RentalApp.Models.Services
                 throw new Exception("Error: Start Mileage cannot be negative.");
             }
 
-            // Save to database
             _rentalRepository.Add(rental);
         }
 
-        // Process a vehicle return
-        public void ReturnVehicle(RentalApp.Models.Core.Rental rental)
+        public void ReturnVehicle(Rental rental)
         {
-            // Check if miles make sense
             if (rental.EndMileage < rental.StartMileage)
             {
                 throw new Exception("Error: End Mileage cannot be less than Start Mileage.");
             }
-
-            // Mark as completed
             rental.Status = RentalApp.Models.Core.RentalStatus.Completed;
             
-            // Update the record in database
             _rentalRepository.Update(rental);
         }
 
-        // Find a specific rental
-        public RentalApp.Models.Core.Rental GetRentalById(int id)
+        public Rental GetRentalById(int id)
         {
             return _rentalRepository.GetById(id);
         }
 
-        // Update rental record
-        public void UpdateRental(RentalApp.Models.Core.Rental rental)
+        public void UpdateRental(Rental rental)
         {
             if (rental.Id <= 0)
             {
@@ -101,6 +92,29 @@ namespace RentalApp.Models.Services
         public int CountPendingReturns()
         {
             return _rentalRepository.CountPendingReturns();
+        }
+
+        public bool HasActiveRental(int customerId)
+        {
+            return _rentalRepository.GetActiveRentalCount(customerId) > 0;
+        }
+
+        public void UpdateRentalStatus(int rentalId, string status)
+        {
+            // Implementation of UpdateRentalStatus if needed, or use existing Update method
+            var rental = _rentalRepository.GetById(rentalId);
+            if (rental != null)
+            {
+                if (Enum.TryParse<RentalApp.Models.Core.RentalStatus>(status, out var rentalStatus))
+                {
+                    rental.Status = rentalStatus;
+                    _rentalRepository.Update(rental);
+                }
+            }
+        }
+        public List<Rental> GetByDateRange(DateTime start, DateTime end)
+        {
+            return _rentalRepository.GetByDateRange(start, end);
         }
     }
 }

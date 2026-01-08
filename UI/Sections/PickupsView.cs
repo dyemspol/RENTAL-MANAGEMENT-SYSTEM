@@ -2,7 +2,9 @@ using System.Windows.Forms;
 using System;
 using System.IO;
 using RentalApp.Models.Services;
-
+using RentalApp.Models.Vehicles;
+using RentalApp.Models.Core;
+using RentalApp.UI.Popups;
 namespace RentalApp.UI.Sections
 {
     public partial class PickupsView : UserControl
@@ -78,8 +80,10 @@ namespace RentalApp.UI.Sections
         {
             try
             {
+                DateTime start = dtpFROM.Value;
+                DateTime end = dtpTO.Value;
                 // Fetch active rentals from DB
-                var rentalList = _rentalManager.GetActiveRentals();
+                var rentalList = _rentalManager.GetByDateRange(start, end);
 
                 // Bind to Grid using BindingSource
                 var bindingSource = new BindingSource();
@@ -127,6 +131,27 @@ namespace RentalApp.UI.Sections
             {
                 MessageBox.Show("Error loading active rentals: " + ex.Message);
             }
+        }
+
+        private void viewChecklistButton_Click(object sender, EventArgs e)
+        {
+            using (var form = new Popups.WalkInForm())
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    LoadActiveRentals(); 
+                }
+            }
+        }
+
+        private void dtpFROM_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpTO_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

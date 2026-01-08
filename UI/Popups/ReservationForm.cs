@@ -12,6 +12,7 @@ namespace RentalApp.UI.Popups
         private CustomerManager _customerManager;
         private VehicleManager _vehicleManager;
         private ReservationManager _reservationManager;
+        private RentalManager _rentalManager;
 
         public ReservationForm()
         {
@@ -19,6 +20,7 @@ namespace RentalApp.UI.Popups
             _customerManager = new CustomerManager();
             _vehicleManager = new VehicleManager();
             _reservationManager = new ReservationManager();
+            _rentalManager = new RentalManager();
             
             // Configure DateTimePickers for 12-hour format
             ConfigureDateTimePickers();
@@ -44,7 +46,7 @@ namespace RentalApp.UI.Popups
             try
             {
                 // 1. Load Customers
-                var customers = _customerManager.GetAllCustomers();
+                var customers = _customerManager.GetAvailableCustomers();
                 cmbCustomers.DataSource = customers;
                 cmbCustomers.DisplayMember = "GetFullName"; 
                 var allVehicles = _vehicleManager.GetAllVehicles();
@@ -93,6 +95,21 @@ namespace RentalApp.UI.Popups
             // 2. Create Reservation Object
             var selectedCustomer = (Customer)cmbCustomers.SelectedItem;
             var selectedVehicle = (Vehicle)cmbVehicles.SelectedItem;
+
+            // 1.5. Check if Customer already has an active status
+            if (_rentalManager.HasActiveRental(selectedCustomer.Id))
+            {
+                MessageBox.Show("This customer already has an active rental. They must return the current vehicle before renting another one.", 
+                    "Active Rental Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (_reservationManager.HasActiveReservation(selectedCustomer.Id))
+            {
+                MessageBox.Show("This customer already has a pending or confirmed reservation.", 
+                    "Existing Reservation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             
             // Check if vehicle is available
             if (selectedVehicle.Status != VehicleStatus.Available)

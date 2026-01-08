@@ -16,12 +16,12 @@ namespace RentalApp.UI.Sections
         private void InitializeComponent()
         {
             this.headerLabel = new System.Windows.Forms.Label();
-            this.dateFromPicker = new System.Windows.Forms.DateTimePicker();
-            this.dateToPicker = new System.Windows.Forms.DateTimePicker();
+            this.dtpFROM = new System.Windows.Forms.DateTimePicker();
+            this.dtpTO = new System.Windows.Forms.DateTimePicker();
             this.toLabel = new System.Windows.Forms.Label();
             this.reservationsGrid = new System.Windows.Forms.DataGridView();
             this.newReservationButton = new System.Windows.Forms.Button();
-            this.viewDetailsButton = new System.Windows.Forms.Button();
+            this.cancelbt = new System.Windows.Forms.Button();
             this.dateRangeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsGrid)).BeginInit();
             this.SuspendLayout();
@@ -37,23 +37,23 @@ namespace RentalApp.UI.Sections
             this.headerLabel.TabIndex = 0;
             this.headerLabel.Text = "Reservations Queue";
             // 
-            // dateFromPicker
+            // dtpFROM
             // 
-            this.dateFromPicker.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dateFromPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateFromPicker.Location = new System.Drawing.Point(87, 39);
-            this.dateFromPicker.Name = "dateFromPicker";
-            this.dateFromPicker.Size = new System.Drawing.Size(95, 23);
-            this.dateFromPicker.TabIndex = 2;
+            this.dtpFROM.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpFROM.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFROM.Location = new System.Drawing.Point(87, 39);
+            this.dtpFROM.Name = "dtpFROM";
+            this.dtpFROM.Size = new System.Drawing.Size(95, 23);
+            this.dtpFROM.TabIndex = 2;
             // 
-            // dateToPicker
+            // dtpTO
             // 
-            this.dateToPicker.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dateToPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateToPicker.Location = new System.Drawing.Point(207, 39);
-            this.dateToPicker.Name = "dateToPicker";
-            this.dateToPicker.Size = new System.Drawing.Size(95, 23);
-            this.dateToPicker.TabIndex = 3;
+            this.dtpTO.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpTO.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTO.Location = new System.Drawing.Point(207, 39);
+            this.dtpTO.Name = "dtpTO";
+            this.dtpTO.Size = new System.Drawing.Size(95, 23);
+            this.dtpTO.TabIndex = 3;
             // 
             // toLabel
             // 
@@ -75,7 +75,7 @@ namespace RentalApp.UI.Sections
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reservationsGrid.BackgroundColor = System.Drawing.Color.White;
             this.reservationsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.reservationsGrid.Location = new System.Drawing.Point(15, 69);
+            this.reservationsGrid.Location = new System.Drawing.Point(16, 69);
             this.reservationsGrid.Name = "reservationsGrid";
             this.reservationsGrid.ReadOnly = true;
             this.reservationsGrid.RowHeadersVisible = false;
@@ -91,35 +91,35 @@ namespace RentalApp.UI.Sections
             this.newReservationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newReservationButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.newReservationButton.ForeColor = System.Drawing.Color.White;
-            this.newReservationButton.Location = new System.Drawing.Point(485, 39);
+            this.newReservationButton.Location = new System.Drawing.Point(432, 39);
             this.newReservationButton.Name = "newReservationButton";
-            this.newReservationButton.Size = new System.Drawing.Size(94, 20);
+            this.newReservationButton.Size = new System.Drawing.Size(94, 24);
             this.newReservationButton.TabIndex = 6;
             this.newReservationButton.Text = "New Reservation";
             this.newReservationButton.UseVisualStyleBackColor = false;
             this.newReservationButton.Click += new System.EventHandler(this.newReservationButton_Click);
             // 
-            // viewDetailsButton
+            // cancelbt
             // 
-            this.viewDetailsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.viewDetailsButton.BackColor = System.Drawing.Color.White;
-            this.viewDetailsButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.viewDetailsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewDetailsButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.viewDetailsButton.ForeColor = System.Drawing.Color.DimGray;
-            this.viewDetailsButton.Location = new System.Drawing.Point(585, 39);
-            this.viewDetailsButton.Name = "viewDetailsButton";
-            this.viewDetailsButton.Size = new System.Drawing.Size(58, 20);
-            this.viewDetailsButton.TabIndex = 7;
-            this.viewDetailsButton.Text = "Details";
-            this.viewDetailsButton.UseVisualStyleBackColor = false;
+            this.cancelbt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelbt.BackColor = System.Drawing.Color.White;
+            this.cancelbt.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.cancelbt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelbt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cancelbt.ForeColor = System.Drawing.Color.DimGray;
+            this.cancelbt.Location = new System.Drawing.Point(532, 39);
+            this.cancelbt.Name = "cancelbt";
+            this.cancelbt.Size = new System.Drawing.Size(111, 24);
+            this.cancelbt.TabIndex = 7;
+            this.cancelbt.Text = "Cancel Reservation";
+            this.cancelbt.UseVisualStyleBackColor = false;
             // 
             // dateRangeLabel
             // 
             this.dateRangeLabel.AutoSize = true;
             this.dateRangeLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateRangeLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.dateRangeLabel.Location = new System.Drawing.Point(15, 42);
+            this.dateRangeLabel.Location = new System.Drawing.Point(14, 44);
             this.dateRangeLabel.Name = "dateRangeLabel";
             this.dateRangeLabel.Size = new System.Drawing.Size(67, 15);
             this.dateRangeLabel.TabIndex = 1;
@@ -131,12 +131,12 @@ namespace RentalApp.UI.Sections
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dateRangeLabel);
-            this.Controls.Add(this.viewDetailsButton);
+            this.Controls.Add(this.cancelbt);
             this.Controls.Add(this.newReservationButton);
             this.Controls.Add(this.reservationsGrid);
             this.Controls.Add(this.toLabel);
-            this.Controls.Add(this.dateToPicker);
-            this.Controls.Add(this.dateFromPicker);
+            this.Controls.Add(this.dtpTO);
+            this.Controls.Add(this.dtpFROM);
             this.Controls.Add(this.headerLabel);
             this.Name = "ReservationsView";
             this.Size = new System.Drawing.Size(660, 329);
@@ -147,12 +147,12 @@ namespace RentalApp.UI.Sections
         }
 
         private System.Windows.Forms.Label headerLabel;
-        private System.Windows.Forms.DateTimePicker dateFromPicker;
-        private System.Windows.Forms.DateTimePicker dateToPicker;
+        private System.Windows.Forms.DateTimePicker dtpFROM;
+        private System.Windows.Forms.DateTimePicker dtpTO;
         private System.Windows.Forms.Label toLabel;
         private System.Windows.Forms.DataGridView reservationsGrid;
         private System.Windows.Forms.Button newReservationButton;
-        private System.Windows.Forms.Button viewDetailsButton;
+        private System.Windows.Forms.Button cancelbt;
         private System.Windows.Forms.Label dateRangeLabel;
     }
 }

@@ -36,6 +36,7 @@ namespace RentalApp.UI.Popups
 
         private void ConfigureDatePickers()
         {
+            dateTimePicker1.Enabled = false;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "MM/dd/yyyy hh:mm tt";
             

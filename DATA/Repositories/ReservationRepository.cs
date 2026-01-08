@@ -112,6 +112,38 @@ namespace RentalApp.Data.Repositories
             return reservations;
         }
 
+        public List<Reservation> GetByDateRange(DateTime start, DateTime end)
+        {
+            List<Reservation> reservations = new List<Reservation>();
+            string sql = @"SELECT r.*, 
+                                  c.FirstName, c.LastName, 
+                                  v.Make, v.Model, v.Year 
+                           FROM Reservations r
+                           LEFT JOIN Customers c ON r.CustomerID = c.ID
+                           LEFT JOIN Vehicles v ON r.VehicleID = v.ID
+                           WHERE r.StartDate >= @start AND r.StartDate <= @end
+                           ORDER BY r.StartDate ASC";
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@start", start.Date);
+                    cmd.Parameters.AddWithValue("@end", end.Date.AddDays(1).AddSeconds(-1));
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            reservations.Add(MapReaderToReservation(reader));
+                        }
+                    }
+                }
+            }
+            return reservations;
+        }
+
         // READ - Get By Customer with Details
         public List<Reservation> GetByCustomer(int customerId)
         {

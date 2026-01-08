@@ -56,13 +56,17 @@ namespace RentalApp.Models.Services
         {
             return _invoiceRepository.CountToday();
         }
-        public int SumInvoicedToday()
+        public decimal SumInvoicedToday()
         {
             return _invoiceRepository.SumInvoicedToday();
         }
-        public int SumRevenue()
+        public decimal SumRevenue()
         {
             return _invoiceRepository.SumRevenue();
+        }
+        public List<Invoice> GetAllPaid()
+        {
+            return _invoiceRepository.GetAllPaid();
         }
         
     }

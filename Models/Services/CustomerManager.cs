@@ -51,6 +51,11 @@ namespace RentalApp.Models.Services
             return _customerRepository.GetAll();
         }
 
+        public List<Customer> GetAvailableCustomers()
+        {
+            return _customerRepository.GetAvailableCustomers();
+        }
+
         public Customer GetCustomerById(int id)
         {
             return _customerRepository.GetById(id);
