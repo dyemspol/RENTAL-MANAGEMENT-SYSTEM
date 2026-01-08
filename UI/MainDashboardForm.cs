@@ -196,7 +196,7 @@ namespace RentalApp.UI
                     cardRevenueLabel.Text = "Processed";
                     cardRevenueValue.Text = _rentalManager.CountCompleted().ToString(); 
                 }
-                else if (section == "Billing")
+                else if (section == "Billing" || section == "Billing and Payments")
                 {
                     cardFleetLabel.Text = "Transactions Today";
                     cardFleetValue.Text = _billingManager.CountToday().ToString();
@@ -205,7 +205,7 @@ namespace RentalApp.UI
                     cardRevenueLabel.Text = "Paid Today";
                     cardRevenueValue.Text = _billingManager.CountToday().ToString();
                 }
-                else if (section == "Reports")
+                else if (section == "Reports" || section == "Reports and Analytics")
                 {
                     cardFleetLabel.Text = "Reports Generated";
                     cardFleetValue.Text = "12"; // Placeholder
@@ -261,6 +261,11 @@ namespace RentalApp.UI
         }
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cardFleet_Paint(object sender, PaintEventArgs e)
         {
 
         }
