@@ -16,6 +16,7 @@ namespace RentalApp.Data.Repositories
                           VALUES 
                           (@make, @model, @year, @color, @plate, @vin, @catId, 
                            @status, @mileage, @fuel, @trans, @seats, @img);
+                           WHERE NOT Status = 'Retired';
                           SELECT LAST_INSERT_ID();";
 
             using (var conn = DatabaseHelper.GetConnection())
