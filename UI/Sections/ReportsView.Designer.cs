@@ -24,6 +24,7 @@ namespace RentalApp.UI.Sections
             this.chartPlaceholderPanel = new System.Windows.Forms.Panel();
             this.chartPlaceholderLabel = new System.Windows.Forms.Label();
             this.generateButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.chartPlaceholderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@ namespace RentalApp.UI.Sections
             // 
             this.rangeFromPicker.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.rangeFromPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.rangeFromPicker.Location = new System.Drawing.Point(91, 48);
+            this.rangeFromPicker.Location = new System.Drawing.Point(22, 48);
             this.rangeFromPicker.Name = "rangeFromPicker";
             this.rangeFromPicker.Size = new System.Drawing.Size(125, 27);
             this.rangeFromPicker.TabIndex = 2;
@@ -51,7 +52,7 @@ namespace RentalApp.UI.Sections
             // 
             this.rangeToPicker.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.rangeToPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.rangeToPicker.Location = new System.Drawing.Point(251, 48);
+            this.rangeToPicker.Location = new System.Drawing.Point(182, 48);
             this.rangeToPicker.Name = "rangeToPicker";
             this.rangeToPicker.Size = new System.Drawing.Size(125, 27);
             this.rangeToPicker.TabIndex = 3;
@@ -61,7 +62,7 @@ namespace RentalApp.UI.Sections
             this.toLabel.AutoSize = true;
             this.toLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.toLabel.Location = new System.Drawing.Point(224, 52);
+            this.toLabel.Location = new System.Drawing.Point(155, 52);
             this.toLabel.Name = "toLabel";
             this.toLabel.Size = new System.Drawing.Size(23, 20);
             this.toLabel.TabIndex = 0;
@@ -79,7 +80,7 @@ namespace RentalApp.UI.Sections
             "Average rental duration",
             "Damage incident rate",
             "Customer retention rate"});
-            this.metricComboBox.Location = new System.Drawing.Point(544, 48);
+            this.metricComboBox.Location = new System.Drawing.Point(444, 48);
             this.metricComboBox.Name = "metricComboBox";
             this.metricComboBox.Size = new System.Drawing.Size(217, 28);
             this.metricComboBox.TabIndex = 5;
@@ -90,7 +91,7 @@ namespace RentalApp.UI.Sections
             this.metricLabel.AutoSize = true;
             this.metricLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.metricLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.metricLabel.Location = new System.Drawing.Point(491, 51);
+            this.metricLabel.Location = new System.Drawing.Point(391, 51);
             this.metricLabel.Name = "metricLabel";
             this.metricLabel.Size = new System.Drawing.Size(51, 20);
             this.metricLabel.TabIndex = 4;
@@ -130,18 +131,34 @@ namespace RentalApp.UI.Sections
             this.generateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.generateButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.generateButton.ForeColor = System.Drawing.Color.White;
-            this.generateButton.Location = new System.Drawing.Point(768, 48);
+            this.generateButton.Location = new System.Drawing.Point(668, 48);
             this.generateButton.Name = "generateButton";
             this.generateButton.Size = new System.Drawing.Size(89, 25);
             this.generateButton.TabIndex = 7;
             this.generateButton.Text = "Generate";
             this.generateButton.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(161)))), ((int)(((byte)(242)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(767, 48);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 25);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Export";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // ReportsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.generateButton);
             this.Controls.Add(this.chartPlaceholderPanel);
             this.Controls.Add(this.metricComboBox);
@@ -167,6 +184,7 @@ namespace RentalApp.UI.Sections
         private System.Windows.Forms.Panel chartPlaceholderPanel;
         private System.Windows.Forms.Label chartPlaceholderLabel;
         private System.Windows.Forms.Button generateButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 
