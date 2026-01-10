@@ -1,16 +1,9 @@
-﻿namespace RentalApp.UI.Popups
+namespace RentalApp.UI.Popups
 {
     partial class CustomerDetailsForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,310 +13,296 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.txtname = new MaterialSkin.Controls.MaterialLabel();
-            this.txtlastname = new MaterialSkin.Controls.MaterialLabel();
-            this.txt = new MaterialSkin.Controls.MaterialLabel();
-            this.txtaddress = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.dlnumber = new MaterialSkin.Controls.MaterialLabel();
-            this.dlissuedate = new MaterialSkin.Controls.MaterialLabel();
-            this.dlexpiredate = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btblacklist = new System.Windows.Forms.Button();
+            this.btclose = new System.Windows.Forms.Button();
+            this.labelHistory = new System.Windows.Forms.Label();
             this.customergrid = new System.Windows.Forms.DataGridView();
-            this.btblacklist = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btclose = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.dlexpiredate = new System.Windows.Forms.Label();
+            this.labelExpire = new System.Windows.Forms.Label();
+            this.dlissuedate = new System.Windows.Forms.Label();
+            this.labelIssue = new System.Windows.Forms.Label();
+            this.dlnumber = new System.Windows.Forms.Label();
+            this.labelDL = new System.Windows.Forms.Label();
+            this.txtaddress = new System.Windows.Forms.Label();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.txtlastname = new System.Windows.Forms.Label();
+            this.labelLast = new System.Windows.Forms.Label();
+            this.txtname = new System.Windows.Forms.Label();
+            this.labelFirst = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customergrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtname
+            // panel1
             // 
-            this.txtname.AutoSize = true;
-            this.txtname.Depth = 0;
-            this.txtname.Font = new System.Drawing.Font("Roboto", 11F);
-            this.txtname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtname.Location = new System.Drawing.Point(16, 94);
-            this.txtname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtname.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(104, 24);
-            this.txtname.TabIndex = 0;
-            this.txtname.Text = "First Name";
-            this.txtname.Click += new System.EventHandler(this.materialLabel1_Click);
-            // 
-            // txtlastname
-            // 
-            this.txtlastname.AutoSize = true;
-            this.txtlastname.Depth = 0;
-            this.txtlastname.Font = new System.Drawing.Font("Roboto", 11F);
-            this.txtlastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtlastname.Location = new System.Drawing.Point(161, 94);
-            this.txtlastname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtlastname.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtlastname.Name = "txtlastname";
-            this.txtlastname.Size = new System.Drawing.Size(93, 24);
-            this.txtlastname.TabIndex = 1;
-            this.txtlastname.Text = "Lastname";
-            this.txtlastname.Click += new System.EventHandler(this.txtlastname_Click);
-            // 
-            // txt
-            // 
-            this.txt.AutoSize = true;
-            this.txt.Depth = 0;
-            this.txt.Font = new System.Drawing.Font("Roboto", 11F);
-            this.txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt.Location = new System.Drawing.Point(17, 151);
-            this.txt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txt.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(80, 24);
-            this.txt.TabIndex = 2;
-            this.txt.Text = "Address : ";
-            this.txt.Click += new System.EventHandler(this.txt_Click);
-            // 
-            // txtaddress
-            // 
-            this.txtaddress.AutoSize = true;
-            this.txtaddress.Depth = 0;
-            this.txtaddress.Font = new System.Drawing.Font("Roboto", 11F);
-            this.txtaddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtaddress.Location = new System.Drawing.Point(132, 151);
-            this.txtaddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtaddress.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtaddress.Name = "txtaddress";
-            this.txtaddress.Size = new System.Drawing.Size(157, 24);
-            this.txtaddress.TabIndex = 3;
-            this.txtaddress.Text = "Porok kalamense";
-            this.txtaddress.Click += new System.EventHandler(this.txtaddress_Click);
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(16, 210);
-            this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(211, 24);
-            this.materialLabel1.TabIndex = 4;
-            this.materialLabel1.Text = "Drivers License Number :";
-            this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click_1);
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(275, 210);
-            this.materialLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(98, 24);
-            this.materialLabel2.TabIndex = 5;
-            this.materialLabel2.Text = "Date Issue :";
-            this.materialLabel2.Click += new System.EventHandler(this.materialLabel2_Click);
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(449, 210);
-            this.materialLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(105, 24);
-            this.materialLabel3.TabIndex = 6;
-            this.materialLabel3.Text = "Date Expire:";
-            this.materialLabel3.Click += new System.EventHandler(this.materialLabel3_Click);
-            // 
-            // dlnumber
-            // 
-            this.dlnumber.AutoSize = true;
-            this.dlnumber.Depth = 0;
-            this.dlnumber.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dlnumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dlnumber.Location = new System.Drawing.Point(16, 249);
-            this.dlnumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.dlnumber.MouseState = MaterialSkin.MouseState.HOVER;
-            this.dlnumber.Name = "dlnumber";
-            this.dlnumber.Size = new System.Drawing.Size(138, 25);
-            this.dlnumber.TabIndex = 7;
-            this.dlnumber.Text = "Ex. 1234234324";
-            this.dlnumber.Click += new System.EventHandler(this.dlnumber_Click);
-            // 
-            // dlissuedate
-            // 
-            this.dlissuedate.AutoSize = true;
-            this.dlissuedate.Depth = 0;
-            this.dlissuedate.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dlissuedate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dlissuedate.Location = new System.Drawing.Point(275, 249);
-            this.dlissuedate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.dlissuedate.MouseState = MaterialSkin.MouseState.HOVER;
-            this.dlissuedate.Name = "dlissuedate";
-            this.dlissuedate.Size = new System.Drawing.Size(106, 25);
-            this.dlissuedate.TabIndex = 8;
-            this.dlissuedate.Text = "2026-01-01";
-            this.dlissuedate.Click += new System.EventHandler(this.dlissuedate_Click);
-            // 
-            // dlexpiredate
-            // 
-            this.dlexpiredate.AutoSize = true;
-            this.dlexpiredate.Depth = 0;
-            this.dlexpiredate.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dlexpiredate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dlexpiredate.Location = new System.Drawing.Point(455, 249);
-            this.dlexpiredate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.dlexpiredate.MouseState = MaterialSkin.MouseState.HOVER;
-            this.dlexpiredate.Name = "dlexpiredate";
-            this.dlexpiredate.Size = new System.Drawing.Size(106, 25);
-            this.dlexpiredate.TabIndex = 9;
-            this.dlexpiredate.Text = "2026-01-01";
-            this.dlexpiredate.Click += new System.EventHandler(this.dlexpiredate_Click);
-            // 
-            // materialLabel4
-            // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(16, 318);
-            this.materialLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(129, 24);
-            this.materialLabel4.TabIndex = 10;
-            this.materialLabel4.Text = "Rental History";
-            this.materialLabel4.Click += new System.EventHandler(this.materialLabel4_Click);
-            // 
-            // mySqlCommand1
-            // 
-            this.mySqlCommand1.CacheAge = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.EnableCaching = false;
-            this.mySqlCommand1.Transaction = null;
-            // 
-            // customergrid
-            // 
-            this.customergrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customergrid.Location = new System.Drawing.Point(24, 352);
-            this.customergrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.customergrid.Name = "customergrid";
-            this.customergrid.RowHeadersWidth = 51;
-            this.customergrid.Size = new System.Drawing.Size(537, 161);
-            this.customergrid.TabIndex = 11;
-            this.customergrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customergrid_CellContentClick);
-            this.customergrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customergrid_CellContentDoubleClick);
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btblacklist);
+            this.panel1.Controls.Add(this.btclose);
+            this.panel1.Controls.Add(this.labelHistory);
+            this.panel1.Controls.Add(this.customergrid);
+            this.panel1.Controls.Add(this.dlexpiredate);
+            this.panel1.Controls.Add(this.labelExpire);
+            this.panel1.Controls.Add(this.dlissuedate);
+            this.panel1.Controls.Add(this.labelIssue);
+            this.panel1.Controls.Add(this.dlnumber);
+            this.panel1.Controls.Add(this.labelDL);
+            this.panel1.Controls.Add(this.txtaddress);
+            this.panel1.Controls.Add(this.labelAddress);
+            this.panel1.Controls.Add(this.txtlastname);
+            this.panel1.Controls.Add(this.labelLast);
+            this.panel1.Controls.Add(this.txtname);
+            this.panel1.Controls.Add(this.labelFirst);
+            this.panel1.Controls.Add(this.lblTitle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(600, 550);
+            this.panel1.TabIndex = 0;
             // 
             // btblacklist
             // 
-            this.btblacklist.AutoSize = true;
-            this.btblacklist.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btblacklist.Depth = 0;
-            this.btblacklist.Location = new System.Drawing.Point(24, 525);
-            this.btblacklist.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.btblacklist.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btblacklist.BackColor = System.Drawing.Color.Crimson;
+            this.btblacklist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btblacklist.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btblacklist.ForeColor = System.Drawing.Color.White;
+            this.btblacklist.Location = new System.Drawing.Point(30, 480);
             this.btblacklist.Name = "btblacklist";
-            this.btblacklist.Primary = false;
-            this.btblacklist.Size = new System.Drawing.Size(102, 36);
-            this.btblacklist.TabIndex = 12;
-            this.btblacklist.Text = "BLAKCLIST";
-            this.btblacklist.UseVisualStyleBackColor = true;
+            this.btblacklist.Size = new System.Drawing.Size(120, 40);
+            this.btblacklist.TabIndex = 16;
+            this.btblacklist.Text = "BLACKLIST";
+            this.btblacklist.UseVisualStyleBackColor = false;
             this.btblacklist.Click += new System.EventHandler(this.btblacklist_Click);
             // 
             // btclose
             // 
-            this.btclose.AutoSize = true;
-            this.btclose.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btclose.Depth = 0;
-            this.btclose.Location = new System.Drawing.Point(460, 524);
-            this.btclose.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.btclose.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btclose.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btclose.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btclose.ForeColor = System.Drawing.Color.DimGray;
+            this.btclose.Location = new System.Drawing.Point(450, 480);
             this.btclose.Name = "btclose";
-            this.btclose.Primary = false;
-            this.btclose.Size = new System.Drawing.Size(65, 36);
-            this.btclose.TabIndex = 13;
+            this.btclose.Size = new System.Drawing.Size(120, 40);
+            this.btclose.TabIndex = 15;
             this.btclose.Text = "CLOSE";
-            this.btclose.UseVisualStyleBackColor = true;
+            this.btclose.UseVisualStyleBackColor = false;
             this.btclose.Click += new System.EventHandler(this.btclose_Click);
             // 
-            // materialLabel5
+            // labelHistory
             // 
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(13, 26);
-            this.materialLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(241, 38);
-            this.materialLabel5.TabIndex = 14;
-            this.materialLabel5.Text = "Customer Details";
+            this.labelHistory.AutoSize = true;
+            this.labelHistory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.labelHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.labelHistory.Location = new System.Drawing.Point(26, 270);
+            this.labelHistory.Name = "labelHistory";
+            this.labelHistory.Size = new System.Drawing.Size(146, 28);
+            this.labelHistory.TabIndex = 14;
+            this.labelHistory.Text = "Rental History";
+            // 
+            // customergrid
+            // 
+            this.customergrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.customergrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.customergrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.customergrid.Location = new System.Drawing.Point(30, 300);
+            this.customergrid.Name = "customergrid";
+            this.customergrid.RowHeadersWidth = 51;
+            this.customergrid.RowTemplate.Height = 24;
+            this.customergrid.Size = new System.Drawing.Size(540, 160);
+            this.customergrid.TabIndex = 13;
+            this.customergrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customergrid_CellContentClick);
+            this.customergrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customergrid_CellContentDoubleClick);
+            // 
+            // dlexpiredate
+            // 
+            this.dlexpiredate.AutoSize = true;
+            this.dlexpiredate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.dlexpiredate.ForeColor = System.Drawing.Color.Black;
+            this.dlexpiredate.Location = new System.Drawing.Point(430, 220);
+            this.dlexpiredate.Name = "dlexpiredate";
+            this.dlexpiredate.Size = new System.Drawing.Size(116, 25);
+            this.dlexpiredate.TabIndex = 12;
+            this.dlexpiredate.Text = "00/00/0000";
+            this.dlexpiredate.Click += new System.EventHandler(this.dlexpiredate_Click);
+            // 
+            // labelExpire
+            // 
+            this.labelExpire.AutoSize = true;
+            this.labelExpire.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.labelExpire.ForeColor = System.Drawing.Color.DimGray;
+            this.labelExpire.Location = new System.Drawing.Point(330, 225);
+            this.labelExpire.Name = "labelExpire";
+            this.labelExpire.Size = new System.Drawing.Size(88, 20);
+            this.labelExpire.TabIndex = 11;
+            this.labelExpire.Text = "Expiry Date:";
+            // 
+            // dlissuedate
+            // 
+            this.dlissuedate.AutoSize = true;
+            this.dlissuedate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.dlissuedate.ForeColor = System.Drawing.Color.Black;
+            this.dlissuedate.Location = new System.Drawing.Point(430, 180);
+            this.dlissuedate.Name = "dlissuedate";
+            this.dlissuedate.Size = new System.Drawing.Size(116, 25);
+            this.dlissuedate.TabIndex = 10;
+            this.dlissuedate.Text = "00/00/0000";
+            this.dlissuedate.Click += new System.EventHandler(this.dlissuedate_Click);
+            // 
+            // labelIssue
+            // 
+            this.labelIssue.AutoSize = true;
+            this.labelIssue.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.labelIssue.ForeColor = System.Drawing.Color.DimGray;
+            this.labelIssue.Location = new System.Drawing.Point(330, 185);
+            this.labelIssue.Name = "labelIssue";
+            this.labelIssue.Size = new System.Drawing.Size(80, 20);
+            this.labelIssue.TabIndex = 9;
+            this.labelIssue.Text = "Issue Date:";
+            // 
+            // dlnumber
+            // 
+            this.dlnumber.AutoSize = true;
+            this.dlnumber.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.dlnumber.ForeColor = System.Drawing.Color.Black;
+            this.dlnumber.Location = new System.Drawing.Point(130, 220);
+            this.dlnumber.Name = "dlnumber";
+            this.dlnumber.Size = new System.Drawing.Size(100, 25);
+            this.dlnumber.TabIndex = 8;
+            this.dlnumber.Text = "A00-0000";
+            this.dlnumber.Click += new System.EventHandler(this.dlnumber_Click);
+            // 
+            // labelDL
+            // 
+            this.labelDL.AutoSize = true;
+            this.labelDL.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.labelDL.ForeColor = System.Drawing.Color.DimGray;
+            this.labelDL.Location = new System.Drawing.Point(30, 225);
+            this.labelDL.Name = "labelDL";
+            this.labelDL.Size = new System.Drawing.Size(89, 20);
+            this.labelDL.TabIndex = 7;
+            this.labelDL.Text = "License No:";
+            // 
+            // txtaddress
+            // 
+            this.txtaddress.AutoSize = true;
+            this.txtaddress.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.txtaddress.ForeColor = System.Drawing.Color.Black;
+            this.txtaddress.Location = new System.Drawing.Point(130, 180);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.Size = new System.Drawing.Size(83, 25);
+            this.txtaddress.TabIndex = 6;
+            this.txtaddress.Text = "Address";
+            this.txtaddress.Click += new System.EventHandler(this.txtaddress_Click);
+            // 
+            // labelAddress
+            // 
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.labelAddress.ForeColor = System.Drawing.Color.DimGray;
+            this.labelAddress.Location = new System.Drawing.Point(30, 185);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(65, 20);
+            this.labelAddress.TabIndex = 5;
+            this.labelAddress.Text = "Address:";
+            // 
+            // txtlastname
+            // 
+            this.txtlastname.AutoSize = true;
+            this.txtlastname.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.txtlastname.ForeColor = System.Drawing.Color.Black;
+            this.txtlastname.Location = new System.Drawing.Point(430, 80);
+            this.txtlastname.Name = "txtlastname";
+            this.txtlastname.Size = new System.Drawing.Size(103, 25);
+            this.txtlastname.TabIndex = 4;
+            this.txtlastname.Text = "Last Name";
+            this.txtlastname.Click += new System.EventHandler(this.txtlastname_Click);
+            // 
+            // labelLast
+            // 
+            this.labelLast.AutoSize = true;
+            this.labelLast.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.labelLast.ForeColor = System.Drawing.Color.DimGray;
+            this.labelLast.Location = new System.Drawing.Point(330, 85);
+            this.labelLast.Name = "labelLast";
+            this.labelLast.Size = new System.Drawing.Size(82, 20);
+            this.labelLast.TabIndex = 3;
+            this.labelLast.Text = "Last Name:";
+            // 
+            // txtname
+            // 
+            this.txtname.AutoSize = true;
+            this.txtname.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.txtname.ForeColor = System.Drawing.Color.Black;
+            this.txtname.Location = new System.Drawing.Point(130, 80);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(106, 25);
+            this.txtname.TabIndex = 2;
+            this.txtname.Text = "First Name";
+            this.txtname.Click += new System.EventHandler(this.txt_Click);
+            // 
+            // labelFirst
+            // 
+            this.labelFirst.AutoSize = true;
+            this.labelFirst.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.labelFirst.ForeColor = System.Drawing.Color.DimGray;
+            this.labelFirst.Location = new System.Drawing.Point(30, 85);
+            this.labelFirst.Name = "labelFirst";
+            this.labelFirst.Size = new System.Drawing.Size(83, 20);
+            this.labelFirst.TabIndex = 1;
+            this.labelFirst.Text = "First Name:";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.lblTitle.Location = new System.Drawing.Point(25, 25);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(262, 41);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Customer Details";
             // 
             // CustomerDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 593);
-            this.Controls.Add(this.materialLabel5);
-            this.Controls.Add(this.btclose);
-            this.Controls.Add(this.btblacklist);
-            this.Controls.Add(this.customergrid);
-            this.Controls.Add(this.materialLabel4);
-            this.Controls.Add(this.dlexpiredate);
-            this.Controls.Add(this.dlissuedate);
-            this.Controls.Add(this.dlnumber);
-            this.Controls.Add(this.materialLabel3);
-            this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.txtaddress);
-            this.Controls.Add(this.txt);
-            this.Controls.Add(this.txtlastname);
-            this.Controls.Add(this.txtname);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(600, 550);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CustomerDetailsForm";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Customer Details";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customergrid)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
-        #endregion
-
-        private MaterialSkin.Controls.MaterialLabel txtname;
-        private MaterialSkin.Controls.MaterialLabel txtlastname;
-        private MaterialSkin.Controls.MaterialLabel txt;
-        private MaterialSkin.Controls.MaterialLabel txtaddress;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialLabel dlnumber;
-        private MaterialSkin.Controls.MaterialLabel dlissuedate;
-        private MaterialSkin.Controls.MaterialLabel dlexpiredate;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label labelFirst;
+        private System.Windows.Forms.Label txtname;
+        private System.Windows.Forms.Label labelLast;
+        private System.Windows.Forms.Label txtlastname;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.Label txtaddress;
+        private System.Windows.Forms.Label labelDL;
+        private System.Windows.Forms.Label dlnumber;
+        private System.Windows.Forms.Label labelIssue;
+        private System.Windows.Forms.Label dlissuedate;
+        private System.Windows.Forms.Label labelExpire;
+        private System.Windows.Forms.Label dlexpiredate;
         private System.Windows.Forms.DataGridView customergrid;
-        private MaterialSkin.Controls.MaterialFlatButton btblacklist;
-        private MaterialSkin.Controls.MaterialFlatButton btclose;
-        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private System.Windows.Forms.Button btblacklist;
+        private System.Windows.Forms.Button btclose;
+        private System.Windows.Forms.Label labelHistory;
     }
 }

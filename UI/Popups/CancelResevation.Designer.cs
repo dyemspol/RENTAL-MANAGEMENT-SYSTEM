@@ -1,16 +1,9 @@
-﻿namespace RentalApp.UI.Popups
+namespace RentalApp.UI.Popups
 {
     partial class CancelResevation
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,225 +13,228 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.txtcstmr = new MaterialSkin.Controls.MaterialLabel();
-            this.vehicletxt = new MaterialSkin.Controls.MaterialLabel();
-            this.rsvtnID = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.pickupdt = new System.Windows.Forms.DateTimePicker();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.expectreturndt = new System.Windows.Forms.DateTimePicker();
-            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
-            this.cancelbt = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.exitbt = new System.Windows.Forms.Button();
+            this.cancelbt = new System.Windows.Forms.Button();
+            this.expectreturndt = new System.Windows.Forms.DateTimePicker();
+            this.materialLabel5 = new System.Windows.Forms.Label();
+            this.pickupdt = new System.Windows.Forms.DateTimePicker();
+            this.materialLabel4 = new System.Windows.Forms.Label();
+            this.vehicletxt = new System.Windows.Forms.Label();
+            this.materialLabel3 = new System.Windows.Forms.Label();
+            this.txtcstmr = new System.Windows.Forms.Label();
+            this.materialLabel2 = new System.Windows.Forms.Label();
+            this.rsvtnID = new System.Windows.Forms.Label();
+            this.materialLabel1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtcstmr
+            // panel1
             // 
-            this.txtcstmr.AutoSize = true;
-            this.txtcstmr.Depth = 0;
-            this.txtcstmr.Font = new System.Drawing.Font("Roboto", 11F);
-            this.txtcstmr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtcstmr.Location = new System.Drawing.Point(157, 121);
-            this.txtcstmr.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtcstmr.Name = "txtcstmr";
-            this.txtcstmr.Size = new System.Drawing.Size(124, 19);
-            this.txtcstmr.TabIndex = 27;
-            this.txtcstmr.Text = "JOSHUA GARCIA";
-            this.txtcstmr.Click += new System.EventHandler(this.txtcstmr_Click);
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.exitbt);
+            this.panel1.Controls.Add(this.cancelbt);
+            this.panel1.Controls.Add(this.expectreturndt);
+            this.panel1.Controls.Add(this.materialLabel5);
+            this.panel1.Controls.Add(this.pickupdt);
+            this.panel1.Controls.Add(this.materialLabel4);
+            this.panel1.Controls.Add(this.vehicletxt);
+            this.panel1.Controls.Add(this.materialLabel3);
+            this.panel1.Controls.Add(this.txtcstmr);
+            this.panel1.Controls.Add(this.materialLabel2);
+            this.panel1.Controls.Add(this.rsvtnID);
+            this.panel1.Controls.Add(this.materialLabel1);
+            this.panel1.Controls.Add(this.lblTitle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(400, 450);
+            this.panel1.TabIndex = 0;
             // 
-            // vehicletxt
+            // exitbt
             // 
-            this.vehicletxt.AutoSize = true;
-            this.vehicletxt.Depth = 0;
-            this.vehicletxt.Font = new System.Drawing.Font("Roboto", 11F);
-            this.vehicletxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.vehicletxt.Location = new System.Drawing.Point(91, 153);
-            this.vehicletxt.MouseState = MaterialSkin.MouseState.HOVER;
-            this.vehicletxt.Name = "vehicletxt";
-            this.vehicletxt.Size = new System.Drawing.Size(152, 19);
-            this.vehicletxt.TabIndex = 26;
-            this.vehicletxt.Text = "KAWASAKIT SA HRT ";
-            this.vehicletxt.Click += new System.EventHandler(this.vehicletxt_Click);
+            this.exitbt.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.exitbt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitbt.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.exitbt.ForeColor = System.Drawing.Color.DimGray;
+            this.exitbt.Location = new System.Drawing.Point(235, 380);
+            this.exitbt.Name = "exitbt";
+            this.exitbt.Size = new System.Drawing.Size(140, 45);
+            this.exitbt.TabIndex = 12;
+            this.exitbt.Text = "Back";
+            this.exitbt.UseVisualStyleBackColor = false;
+            this.exitbt.Click += new System.EventHandler(this.exitbt_Click);
             // 
-            // rsvtnID
+            // cancelbt
             // 
-            this.rsvtnID.AutoSize = true;
-            this.rsvtnID.Depth = 0;
-            this.rsvtnID.Font = new System.Drawing.Font("Roboto", 11F);
-            this.rsvtnID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rsvtnID.Location = new System.Drawing.Point(166, 83);
-            this.rsvtnID.MouseState = MaterialSkin.MouseState.HOVER;
-            this.rsvtnID.Name = "rsvtnID";
-            this.rsvtnID.Size = new System.Drawing.Size(17, 19);
-            this.rsvtnID.TabIndex = 25;
-            this.rsvtnID.Text = "4";
-            this.rsvtnID.Click += new System.EventHandler(this.rsvtnID_Click);
-            // 
-            // materialLabel4
-            // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(12, 153);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(78, 19);
-            this.materialLabel4.TabIndex = 20;
-            this.materialLabel4.Text = "VEHICLE: ";
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(12, 121);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(148, 19);
-            this.materialLabel3.TabIndex = 19;
-            this.materialLabel3.Text = "CUSTOMERS NAME:";
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(12, 83);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(130, 19);
-            this.materialLabel1.TabIndex = 18;
-            this.materialLabel1.Text = "RESERVATION ID:";
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Candara", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(12, 24);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(276, 33);
-            this.materialLabel2.TabIndex = 30;
-            this.materialLabel2.Text = "CANCEL RESERVATION";
-            // 
-            // pickupdt
-            // 
-            this.pickupdt.Enabled = false;
-            this.pickupdt.Location = new System.Drawing.Point(130, 190);
-            this.pickupdt.Name = "pickupdt";
-            this.pickupdt.Size = new System.Drawing.Size(182, 20);
-            this.pickupdt.TabIndex = 22;
-            this.pickupdt.ValueChanged += new System.EventHandler(this.pickupdt_ValueChanged);
-            // 
-            // materialLabel6
-            // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(14, 192);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(101, 19);
-            this.materialLabel6.TabIndex = 23;
-            this.materialLabel6.Text = "START DATE:";
+            this.cancelbt.BackColor = System.Drawing.Color.Crimson;
+            this.cancelbt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelbt.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.cancelbt.ForeColor = System.Drawing.Color.White;
+            this.cancelbt.Location = new System.Drawing.Point(25, 380);
+            this.cancelbt.Name = "cancelbt";
+            this.cancelbt.Size = new System.Drawing.Size(200, 45);
+            this.cancelbt.TabIndex = 11;
+            this.cancelbt.Text = "Cancel Reservation";
+            this.cancelbt.UseVisualStyleBackColor = false;
+            this.cancelbt.Click += new System.EventHandler(this.cancelbt_Click);
             // 
             // expectreturndt
             // 
             this.expectreturndt.Enabled = false;
-            this.expectreturndt.Location = new System.Drawing.Point(130, 219);
+            this.expectreturndt.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.expectreturndt.Location = new System.Drawing.Point(25, 310);
             this.expectreturndt.Name = "expectreturndt";
-            this.expectreturndt.Size = new System.Drawing.Size(182, 20);
-            this.expectreturndt.TabIndex = 29;
+            this.expectreturndt.Size = new System.Drawing.Size(350, 30);
+            this.expectreturndt.TabIndex = 10;
             this.expectreturndt.ValueChanged += new System.EventHandler(this.expectreturndt_ValueChanged);
             // 
-            // materialLabel8
+            // materialLabel5
             // 
-            this.materialLabel8.AutoSize = true;
-            this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel8.Location = new System.Drawing.Point(14, 219);
-            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(85, 19);
-            this.materialLabel8.TabIndex = 28;
-            this.materialLabel8.Text = "END DATE:";
-            this.materialLabel8.Click += new System.EventHandler(this.materialLabel8_Click);
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel5.Location = new System.Drawing.Point(21, 285);
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(91, 20);
+            this.materialLabel5.TabIndex = 9;
+            this.materialLabel5.Text = "Return Date:";
             // 
-            // cancelbt
+            // pickupdt
             // 
-            this.cancelbt.Location = new System.Drawing.Point(16, 303);
-            this.cancelbt.Name = "cancelbt";
-            this.cancelbt.Size = new System.Drawing.Size(116, 50);
-            this.cancelbt.TabIndex = 31;
-            this.cancelbt.Text = "Cancel Reservation";
-            this.cancelbt.UseVisualStyleBackColor = true;
-            this.cancelbt.Click += new System.EventHandler(this.cancelbt_Click);
+            this.pickupdt.Enabled = false;
+            this.pickupdt.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.pickupdt.Location = new System.Drawing.Point(25, 230);
+            this.pickupdt.Name = "pickupdt";
+            this.pickupdt.Size = new System.Drawing.Size(350, 30);
+            this.pickupdt.TabIndex = 8;
+            this.pickupdt.ValueChanged += new System.EventHandler(this.pickupdt_ValueChanged);
             // 
-            // exitbt
+            // materialLabel4
             // 
-            this.exitbt.Location = new System.Drawing.Point(172, 303);
-            this.exitbt.Name = "exitbt";
-            this.exitbt.Size = new System.Drawing.Size(116, 50);
-            this.exitbt.TabIndex = 32;
-            this.exitbt.Text = "Exit";
-            this.exitbt.UseVisualStyleBackColor = true;
-            this.exitbt.Click += new System.EventHandler(this.exitbt_Click);
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel4.Location = new System.Drawing.Point(21, 205);
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(89, 20);
+            this.materialLabel4.TabIndex = 7;
+            this.materialLabel4.Text = "Pickup Date:";
+            // 
+            // vehicletxt
+            // 
+            this.vehicletxt.AutoSize = true;
+            this.vehicletxt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.vehicletxt.ForeColor = System.Drawing.Color.Black;
+            this.vehicletxt.Location = new System.Drawing.Point(150, 160);
+            this.vehicletxt.Name = "vehicletxt";
+            this.vehicletxt.Size = new System.Drawing.Size(125, 25);
+            this.vehicletxt.TabIndex = 6;
+            this.vehicletxt.Text = "Vehicle Name";
+            this.vehicletxt.Click += new System.EventHandler(this.vehicletxt_Click);
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel3.Location = new System.Drawing.Point(21, 165);
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(60, 20);
+            this.materialLabel3.TabIndex = 5;
+            this.materialLabel3.Text = "Vehicle:";
+            // 
+            // txtcstmr
+            // 
+            this.txtcstmr.AutoSize = true;
+            this.txtcstmr.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.txtcstmr.ForeColor = System.Drawing.Color.Black;
+            this.txtcstmr.Location = new System.Drawing.Point(150, 120);
+            this.txtcstmr.Name = "txtcstmr";
+            this.txtcstmr.Size = new System.Drawing.Size(155, 25);
+            this.txtcstmr.TabIndex = 4;
+            this.txtcstmr.Text = "Customer Name";
+            this.txtcstmr.Click += new System.EventHandler(this.txtcstmr_Click);
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel2.Location = new System.Drawing.Point(21, 125);
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(75, 20);
+            this.materialLabel2.TabIndex = 3;
+            this.materialLabel2.Text = "Customer:";
+            // 
+            // rsvtnID
+            // 
+            this.rsvtnID.AutoSize = true;
+            this.rsvtnID.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.rsvtnID.ForeColor = System.Drawing.Color.Black;
+            this.rsvtnID.Location = new System.Drawing.Point(150, 80);
+            this.rsvtnID.Name = "rsvtnID";
+            this.rsvtnID.Size = new System.Drawing.Size(32, 25);
+            this.rsvtnID.TabIndex = 2;
+            this.rsvtnID.Text = "00";
+            this.rsvtnID.Click += new System.EventHandler(this.rsvtnID_Click);
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel1.Location = new System.Drawing.Point(21, 85);
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(108, 20);
+            this.materialLabel1.TabIndex = 1;
+            this.materialLabel1.Text = "Reservation ID:";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.lblTitle.Location = new System.Drawing.Point(20, 20);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(283, 41);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Cancel Reservation";
             // 
             // CancelResevation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 382);
-            this.Controls.Add(this.exitbt);
-            this.Controls.Add(this.cancelbt);
-            this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.expectreturndt);
-            this.Controls.Add(this.materialLabel8);
-            this.Controls.Add(this.txtcstmr);
-            this.Controls.Add(this.vehicletxt);
-            this.Controls.Add(this.rsvtnID);
-            this.Controls.Add(this.materialLabel6);
-            this.Controls.Add(this.pickupdt);
-            this.Controls.Add(this.materialLabel4);
-            this.Controls.Add(this.materialLabel3);
-            this.Controls.Add(this.materialLabel1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(400, 450);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CancelResevation";
-            this.Text = "v";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Cancel Reservation";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
-        #endregion
-        private MaterialSkin.Controls.MaterialLabel txtcstmr;
-        private MaterialSkin.Controls.MaterialLabel vehicletxt;
-        private MaterialSkin.Controls.MaterialLabel rsvtnID;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label materialLabel1;
+        private System.Windows.Forms.Label rsvtnID;
+        private System.Windows.Forms.Label materialLabel2;
+        private System.Windows.Forms.Label txtcstmr;
+        private System.Windows.Forms.Label materialLabel3;
+        private System.Windows.Forms.Label vehicletxt;
+        private System.Windows.Forms.Label materialLabel4;
         private System.Windows.Forms.DateTimePicker pickupdt;
-        private MaterialSkin.Controls.MaterialLabel materialLabel6;
+        private System.Windows.Forms.Label materialLabel5;
         private System.Windows.Forms.DateTimePicker expectreturndt;
-        private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private System.Windows.Forms.Button cancelbt;
         private System.Windows.Forms.Button exitbt;
     }

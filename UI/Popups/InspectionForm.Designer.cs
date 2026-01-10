@@ -2,15 +2,8 @@
 {
     partial class InspectionForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,443 +13,431 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtrsv = new System.Windows.Forms.TextBox();
-            this.txtcstmr = new System.Windows.Forms.TextBox();
-            this.txtsm = new System.Windows.Forms.TextBox();
-            this.txtem = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.cmbIC = new System.Windows.Forms.ComboBox();
-            this.cmbEC = new System.Windows.Forms.ComboBox();
-            this.cmbFL = new System.Windows.Forms.ComboBox();
-            this.svYesbt = new MaterialSkin.Controls.MaterialRadioButton();
-            this.svNobt = new MaterialSkin.Controls.MaterialRadioButton();
-            this.caYesbt = new MaterialSkin.Controls.MaterialRadioButton();
-            this.caNobt = new MaterialSkin.Controls.MaterialRadioButton();
-            this.svbt = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.cnbt = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.materialLabel12 = new System.Windows.Forms.Label();
+            this.cnbt = new System.Windows.Forms.Button();
+            this.svbt = new System.Windows.Forms.Button();
+            this.caNobt = new System.Windows.Forms.RadioButton();
+            this.caYesbt = new System.Windows.Forms.RadioButton();
+            this.svNobt = new System.Windows.Forms.RadioButton();
+            this.svYesbt = new System.Windows.Forms.RadioButton();
+            this.cmbFL = new System.Windows.Forms.ComboBox();
+            this.cmbEC = new System.Windows.Forms.ComboBox();
+            this.cmbIC = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtem = new System.Windows.Forms.TextBox();
+            this.txtsm = new System.Windows.Forms.TextBox();
+            this.txtcstmr = new System.Windows.Forms.TextBox();
+            this.txtrsv = new System.Windows.Forms.TextBox();
+            this.materialLabel11 = new System.Windows.Forms.Label();
+            this.materialLabel10 = new System.Windows.Forms.Label();
+            this.materialLabel9 = new System.Windows.Forms.Label();
+            this.materialLabel8 = new System.Windows.Forms.Label();
+            this.materialLabel7 = new System.Windows.Forms.Label();
+            this.materialLabel6 = new System.Windows.Forms.Label();
+            this.materialLabel5 = new System.Windows.Forms.Label();
+            this.materialLabel4 = new System.Windows.Forms.Label();
+            this.materialLabel3 = new System.Windows.Forms.Label();
+            this.materialLabel2 = new System.Windows.Forms.Label();
+            this.materialLabel1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // materialLabel1
+            // panel1
             // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(12, 22);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(110, 19);
-            this.materialLabel1.TabIndex = 0;
-            this.materialLabel1.Text = "Reservation ID:";
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.materialLabel12);
+            this.panel1.Controls.Add(this.cnbt);
+            this.panel1.Controls.Add(this.svbt);
+            this.panel1.Controls.Add(this.caNobt);
+            this.panel1.Controls.Add(this.caYesbt);
+            this.panel1.Controls.Add(this.svNobt);
+            this.panel1.Controls.Add(this.svYesbt);
+            this.panel1.Controls.Add(this.cmbFL);
+            this.panel1.Controls.Add(this.cmbEC);
+            this.panel1.Controls.Add(this.cmbIC);
+            this.panel1.Controls.Add(this.dateTimePicker2);
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.txtem);
+            this.panel1.Controls.Add(this.txtsm);
+            this.panel1.Controls.Add(this.txtcstmr);
+            this.panel1.Controls.Add(this.txtrsv);
+            this.panel1.Controls.Add(this.materialLabel11);
+            this.panel1.Controls.Add(this.materialLabel10);
+            this.panel1.Controls.Add(this.materialLabel9);
+            this.panel1.Controls.Add(this.materialLabel8);
+            this.panel1.Controls.Add(this.materialLabel7);
+            this.panel1.Controls.Add(this.materialLabel6);
+            this.panel1.Controls.Add(this.materialLabel5);
+            this.panel1.Controls.Add(this.materialLabel4);
+            this.panel1.Controls.Add(this.materialLabel3);
+            this.panel1.Controls.Add(this.materialLabel2);
+            this.panel1.Controls.Add(this.materialLabel1);
+            this.panel1.Controls.Add(this.lblTitle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(600, 650);
+            this.panel1.TabIndex = 0;
             // 
-            // materialLabel2
+            // lblTitle
             // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(12, 68);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(122, 19);
-            this.materialLabel2.TabIndex = 1;
-            this.materialLabel2.Text = "Starting Mileage:";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.lblTitle.Location = new System.Drawing.Point(20, 15);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(262, 41);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Vehicle Inspection";
             // 
-            // materialLabel3
+            // textBox1
             // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(262, 68);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(115, 19);
-            this.materialLabel3.TabIndex = 2;
-            this.materialLabel3.Text = "Ending Mileage:";
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textBox1.Location = new System.Drawing.Point(25, 450);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(540, 100);
+            this.textBox1.TabIndex = 27;
             // 
-            // materialLabel4
+            // materialLabel12
             // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(262, 22);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(134, 19);
-            this.materialLabel4.TabIndex = 3;
-            this.materialLabel4.Text = "Customer\'s Name:";
+            this.materialLabel12.AutoSize = true;
+            this.materialLabel12.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel12.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel12.Location = new System.Drawing.Point(21, 425);
+            this.materialLabel12.Name = "materialLabel12";
+            this.materialLabel12.Size = new System.Drawing.Size(51, 20);
+            this.materialLabel12.TabIndex = 26;
+            this.materialLabel12.Text = "Notes:";
             // 
-            // materialLabel5
+            // cnbt
             // 
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(12, 119);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(156, 19);
-            this.materialLabel5.TabIndex = 4;
-            this.materialLabel5.Text = "Expected Return Date:";
+            this.cnbt.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cnbt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cnbt.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cnbt.ForeColor = System.Drawing.Color.DimGray;
+            this.cnbt.Location = new System.Drawing.Point(325, 570);
+            this.cnbt.Name = "cnbt";
+            this.cnbt.Size = new System.Drawing.Size(140, 45);
+            this.cnbt.TabIndex = 25;
+            this.cnbt.Text = "CANCEL";
+            this.cnbt.UseVisualStyleBackColor = false;
+            this.cnbt.Click += new System.EventHandler(this.cnbt_Click);
             // 
-            // materialLabel6
+            // svbt
             // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(13, 154);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(138, 19);
-            this.materialLabel6.TabIndex = 5;
-            this.materialLabel6.Text = "Actual Return Date:";
-            // 
-            // materialLabel7
-            // 
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(12, 192);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(130, 19);
-            this.materialLabel7.TabIndex = 6;
-            this.materialLabel7.Text = "Interior Condition:";
-            // 
-            // materialLabel8
-            // 
-            this.materialLabel8.AutoSize = true;
-            this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel8.Location = new System.Drawing.Point(14, 226);
-            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(134, 19);
-            this.materialLabel8.TabIndex = 7;
-            this.materialLabel8.Text = "Exterior Condition:";
-            // 
-            // materialLabel9
-            // 
-            this.materialLabel9.AutoSize = true;
-            this.materialLabel9.Depth = 0;
-            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel9.Location = new System.Drawing.Point(12, 268);
-            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel9.Name = "materialLabel9";
-            this.materialLabel9.Size = new System.Drawing.Size(80, 19);
-            this.materialLabel9.TabIndex = 8;
-            this.materialLabel9.Text = "Fuel Level:";
-            // 
-            // materialLabel10
-            // 
-            this.materialLabel10.AutoSize = true;
-            this.materialLabel10.Depth = 0;
-            this.materialLabel10.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel10.Location = new System.Drawing.Point(12, 353);
-            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel10.Name = "materialLabel10";
-            this.materialLabel10.Size = new System.Drawing.Size(158, 19);
-            this.materialLabel10.TabIndex = 9;
-            this.materialLabel10.Text = "Complete Accesories:";
-            // 
-            // materialLabel11
-            // 
-            this.materialLabel11.AutoSize = true;
-            this.materialLabel11.Depth = 0;
-            this.materialLabel11.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel11.Location = new System.Drawing.Point(13, 307);
-            this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel11.Name = "materialLabel11";
-            this.materialLabel11.Size = new System.Drawing.Size(141, 19);
-            this.materialLabel11.TabIndex = 10;
-            this.materialLabel11.Text = "Smoking Violation: ";
-            // 
-            // txtrsv
-            // 
-            this.txtrsv.Location = new System.Drawing.Point(118, 22);
-            this.txtrsv.Name = "txtrsv";
-            this.txtrsv.ReadOnly = true;
-            this.txtrsv.Size = new System.Drawing.Size(129, 20);
-            this.txtrsv.TabIndex = 11;
-            this.txtrsv.TextChanged += new System.EventHandler(this.txtrsv_TextChanged);
-            // 
-            // txtcstmr
-            // 
-            this.txtcstmr.Location = new System.Drawing.Point(394, 22);
-            this.txtcstmr.Name = "txtcstmr";
-            this.txtcstmr.ReadOnly = true;
-            this.txtcstmr.Size = new System.Drawing.Size(118, 20);
-            this.txtcstmr.TabIndex = 12;
-            this.txtcstmr.TextChanged += new System.EventHandler(this.txtcstmr_TextChanged);
-            // 
-            // txtsm
-            // 
-            this.txtsm.Location = new System.Drawing.Point(134, 67);
-            this.txtsm.Name = "txtsm";
-            this.txtsm.ReadOnly = true;
-            this.txtsm.Size = new System.Drawing.Size(113, 20);
-            this.txtsm.TabIndex = 13;
-            this.txtsm.TextChanged += new System.EventHandler(this.txtsm_TextChanged);
-            // 
-            // txtem
-            // 
-            this.txtem.Location = new System.Drawing.Point(382, 67);
-            this.txtem.Name = "txtem";
-            this.txtem.Size = new System.Drawing.Size(129, 20);
-            this.txtem.TabIndex = 14;
-            this.txtem.TextChanged += new System.EventHandler(this.txtem_TextChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(164, 117);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(196, 20);
-            this.dateTimePicker1.TabIndex = 15;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(164, 155);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(196, 20);
-            this.dateTimePicker2.TabIndex = 16;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
-            // 
-            // cmbIC
-            // 
-            this.cmbIC.FormattingEnabled = true;
-            this.cmbIC.Location = new System.Drawing.Point(164, 192);
-            this.cmbIC.Name = "cmbIC";
-            this.cmbIC.Size = new System.Drawing.Size(196, 21);
-            this.cmbIC.TabIndex = 17;
-            this.cmbIC.SelectedIndexChanged += new System.EventHandler(this.cmbIC_SelectedIndexChanged);
-            // 
-            // cmbEC
-            // 
-            this.cmbEC.FormattingEnabled = true;
-            this.cmbEC.Location = new System.Drawing.Point(164, 226);
-            this.cmbEC.Name = "cmbEC";
-            this.cmbEC.Size = new System.Drawing.Size(196, 21);
-            this.cmbEC.TabIndex = 18;
-            this.cmbEC.SelectedIndexChanged += new System.EventHandler(this.cmbEC_SelectedIndexChanged);
-            // 
-            // cmbFL
-            // 
-            this.cmbFL.FormattingEnabled = true;
-            this.cmbFL.Location = new System.Drawing.Point(89, 266);
-            this.cmbFL.Name = "cmbFL";
-            this.cmbFL.Size = new System.Drawing.Size(108, 21);
-            this.cmbFL.TabIndex = 19;
-            this.cmbFL.SelectedIndexChanged += new System.EventHandler(this.cmbFL_SelectedIndexChanged);
-            // 
-            // svYesbt
-            // 
-            this.svYesbt.AutoSize = true;
-            this.svYesbt.Depth = 0;
-            this.svYesbt.Font = new System.Drawing.Font("Roboto", 10F);
-            this.svYesbt.Location = new System.Drawing.Point(157, 302);
-            this.svYesbt.Margin = new System.Windows.Forms.Padding(0);
-            this.svYesbt.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.svYesbt.MouseState = MaterialSkin.MouseState.HOVER;
-            this.svYesbt.Name = "svYesbt";
-            this.svYesbt.Ripple = true;
-            this.svYesbt.Size = new System.Drawing.Size(52, 30);
-            this.svYesbt.TabIndex = 20;
-            this.svYesbt.TabStop = true;
-            this.svYesbt.Text = "Yes";
-            this.svYesbt.UseVisualStyleBackColor = true;
-            this.svYesbt.CheckedChanged += new System.EventHandler(this.svYesbt_CheckedChanged);
-            // 
-            // svNobt
-            // 
-            this.svNobt.AutoSize = true;
-            this.svNobt.Depth = 0;
-            this.svNobt.Font = new System.Drawing.Font("Roboto", 10F);
-            this.svNobt.Location = new System.Drawing.Point(223, 302);
-            this.svNobt.Margin = new System.Windows.Forms.Padding(0);
-            this.svNobt.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.svNobt.MouseState = MaterialSkin.MouseState.HOVER;
-            this.svNobt.Name = "svNobt";
-            this.svNobt.Ripple = true;
-            this.svNobt.Size = new System.Drawing.Size(47, 30);
-            this.svNobt.TabIndex = 21;
-            this.svNobt.TabStop = true;
-            this.svNobt.Text = "No";
-            this.svNobt.UseVisualStyleBackColor = true;
-            this.svNobt.CheckedChanged += new System.EventHandler(this.svNobt_CheckedChanged);
-            // 
-            // caYesbt
-            // 
-            this.caYesbt.AutoSize = true;
-            this.caYesbt.Depth = 0;
-            this.caYesbt.Font = new System.Drawing.Font("Roboto", 10F);
-            this.caYesbt.Location = new System.Drawing.Point(159, 350);
-            this.caYesbt.Margin = new System.Windows.Forms.Padding(0);
-            this.caYesbt.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.caYesbt.MouseState = MaterialSkin.MouseState.HOVER;
-            this.caYesbt.Name = "caYesbt";
-            this.caYesbt.Ripple = true;
-            this.caYesbt.Size = new System.Drawing.Size(52, 30);
-            this.caYesbt.TabIndex = 22;
-            this.caYesbt.TabStop = true;
-            this.caYesbt.Text = "Yes";
-            this.caYesbt.UseVisualStyleBackColor = true;
-            this.caYesbt.CheckedChanged += new System.EventHandler(this.caYesbt_CheckedChanged);
+            this.svbt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.svbt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.svbt.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.svbt.ForeColor = System.Drawing.Color.White;
+            this.svbt.Location = new System.Drawing.Point(80, 570);
+            this.svbt.Name = "svbt";
+            this.svbt.Size = new System.Drawing.Size(200, 45);
+            this.svbt.TabIndex = 24;
+            this.svbt.Text = "SAVE AND RETURN";
+            this.svbt.UseVisualStyleBackColor = false;
+            this.svbt.Click += new System.EventHandler(this.svbt_Click);
             // 
             // caNobt
             // 
             this.caNobt.AutoSize = true;
-            this.caNobt.Depth = 0;
-            this.caNobt.Font = new System.Drawing.Font("Roboto", 10F);
-            this.caNobt.Location = new System.Drawing.Point(224, 350);
-            this.caNobt.Margin = new System.Windows.Forms.Padding(0);
-            this.caNobt.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.caNobt.MouseState = MaterialSkin.MouseState.HOVER;
+            this.caNobt.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.caNobt.Location = new System.Drawing.Point(250, 390);
             this.caNobt.Name = "caNobt";
-            this.caNobt.Ripple = true;
-            this.caNobt.Size = new System.Drawing.Size(47, 30);
+            this.caNobt.Size = new System.Drawing.Size(53, 27);
             this.caNobt.TabIndex = 23;
             this.caNobt.TabStop = true;
             this.caNobt.Text = "No";
             this.caNobt.UseVisualStyleBackColor = true;
             this.caNobt.CheckedChanged += new System.EventHandler(this.caNobt_CheckedChanged);
             // 
-            // svbt
+            // caYesbt
             // 
-            this.svbt.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.svbt.BackgroundImage = global::RentalApp.Properties.Resources._3f854611_2392_4611_8d7c_e67094331d91_removebg_preview;
-            this.svbt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.svbt.Cursor = System.Windows.Forms.Cursors.Default;
-            this.svbt.Depth = 0;
-            this.svbt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.svbt.Location = new System.Drawing.Point(80, 561);
-            this.svbt.MouseState = MaterialSkin.MouseState.HOVER;
-            this.svbt.Name = "svbt";
-            this.svbt.Primary = true;
-            this.svbt.Size = new System.Drawing.Size(145, 43);
-            this.svbt.TabIndex = 24;
-            this.svbt.Text = "SAVE AND RETURN";
-            this.svbt.UseVisualStyleBackColor = false;
-            this.svbt.Click += new System.EventHandler(this.svbt_Click);
+            this.caYesbt.AutoSize = true;
+            this.caYesbt.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.caYesbt.Location = new System.Drawing.Point(190, 390);
+            this.caYesbt.Name = "caYesbt";
+            this.caYesbt.Size = new System.Drawing.Size(54, 27);
+            this.caYesbt.TabIndex = 22;
+            this.caYesbt.TabStop = true;
+            this.caYesbt.Text = "Yes";
+            this.caYesbt.UseVisualStyleBackColor = true;
+            this.caYesbt.CheckedChanged += new System.EventHandler(this.caYesbt_CheckedChanged);
             // 
-            // cnbt
+            // svNobt
             // 
-            this.cnbt.Depth = 0;
-            this.cnbt.Location = new System.Drawing.Point(274, 561);
-            this.cnbt.MouseState = MaterialSkin.MouseState.HOVER;
-            this.cnbt.Name = "cnbt";
-            this.cnbt.Primary = true;
-            this.cnbt.Size = new System.Drawing.Size(145, 43);
-            this.cnbt.TabIndex = 25;
-            this.cnbt.Text = "CANCEL";
-            this.cnbt.UseVisualStyleBackColor = true;
-            this.cnbt.Click += new System.EventHandler(this.cnbt_Click);
+            this.svNobt.AutoSize = true;
+            this.svNobt.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.svNobt.Location = new System.Drawing.Point(250, 350);
+            this.svNobt.Name = "svNobt";
+            this.svNobt.Size = new System.Drawing.Size(53, 27);
+            this.svNobt.TabIndex = 21;
+            this.svNobt.TabStop = true;
+            this.svNobt.Text = "No";
+            this.svNobt.UseVisualStyleBackColor = true;
+            this.svNobt.CheckedChanged += new System.EventHandler(this.svNobt_CheckedChanged);
             // 
-            // materialLabel12
+            // svYesbt
             // 
-            this.materialLabel12.AutoSize = true;
-            this.materialLabel12.Depth = 0;
-            this.materialLabel12.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel12.Location = new System.Drawing.Point(12, 397);
-            this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel12.Name = "materialLabel12";
-            this.materialLabel12.Size = new System.Drawing.Size(54, 19);
-            this.materialLabel12.TabIndex = 26;
-            this.materialLabel12.Text = "Notes:";
+            this.svYesbt.AutoSize = true;
+            this.svYesbt.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.svYesbt.Location = new System.Drawing.Point(190, 350);
+            this.svYesbt.Name = "svYesbt";
+            this.svYesbt.Size = new System.Drawing.Size(54, 27);
+            this.svYesbt.TabIndex = 20;
+            this.svYesbt.TabStop = true;
+            this.svYesbt.Text = "Yes";
+            this.svYesbt.UseVisualStyleBackColor = true;
+            this.svYesbt.CheckedChanged += new System.EventHandler(this.svYesbt_CheckedChanged);
             // 
-            // textBox1
+            // cmbFL
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 419);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(508, 110);
-            this.textBox1.TabIndex = 27;
+            this.cmbFL.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbFL.FormattingEnabled = true;
+            this.cmbFL.Location = new System.Drawing.Point(190, 310);
+            this.cmbFL.Name = "cmbFL";
+            this.cmbFL.Size = new System.Drawing.Size(150, 31);
+            this.cmbFL.TabIndex = 19;
+            this.cmbFL.SelectedIndexChanged += new System.EventHandler(this.cmbFL_SelectedIndexChanged);
+            // 
+            // cmbEC
+            // 
+            this.cmbEC.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbEC.FormattingEnabled = true;
+            this.cmbEC.Location = new System.Drawing.Point(190, 270);
+            this.cmbEC.Name = "cmbEC";
+            this.cmbEC.Size = new System.Drawing.Size(250, 31);
+            this.cmbEC.TabIndex = 18;
+            this.cmbEC.SelectedIndexChanged += new System.EventHandler(this.cmbEC_SelectedIndexChanged);
+            // 
+            // cmbIC
+            // 
+            this.cmbIC.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbIC.FormattingEnabled = true;
+            this.cmbIC.Location = new System.Drawing.Point(190, 230);
+            this.cmbIC.Name = "cmbIC";
+            this.cmbIC.Size = new System.Drawing.Size(250, 31);
+            this.cmbIC.TabIndex = 17;
+            this.cmbIC.SelectedIndexChanged += new System.EventHandler(this.cmbIC_SelectedIndexChanged);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dateTimePicker2.Location = new System.Drawing.Point(190, 190);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(250, 30);
+            this.dateTimePicker2.TabIndex = 16;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(190, 150);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(250, 30);
+            this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // txtem
+            // 
+            this.txtem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtem.Location = new System.Drawing.Point(420, 110);
+            this.txtem.Name = "txtem";
+            this.txtem.Size = new System.Drawing.Size(140, 30);
+            this.txtem.TabIndex = 14;
+            this.txtem.TextChanged += new System.EventHandler(this.txtem_TextChanged);
+            // 
+            // txtsm
+            // 
+            this.txtsm.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtsm.Location = new System.Drawing.Point(150, 110);
+            this.txtsm.Name = "txtsm";
+            this.txtsm.ReadOnly = true;
+            this.txtsm.Size = new System.Drawing.Size(110, 30);
+            this.txtsm.TabIndex = 13;
+            this.txtsm.TextChanged += new System.EventHandler(this.txtsm_TextChanged);
+            // 
+            // txtcstmr
+            // 
+            this.txtcstmr.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtcstmr.Location = new System.Drawing.Point(420, 70);
+            this.txtcstmr.Name = "txtcstmr";
+            this.txtcstmr.ReadOnly = true;
+            this.txtcstmr.Size = new System.Drawing.Size(140, 30);
+            this.txtcstmr.TabIndex = 12;
+            this.txtcstmr.TextChanged += new System.EventHandler(this.txtcstmr_TextChanged);
+            // 
+            // txtrsv
+            // 
+            this.txtrsv.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtrsv.Location = new System.Drawing.Point(150, 70);
+            this.txtrsv.Name = "txtrsv";
+            this.txtrsv.ReadOnly = true;
+            this.txtrsv.Size = new System.Drawing.Size(110, 30);
+            this.txtrsv.TabIndex = 11;
+            this.txtrsv.TextChanged += new System.EventHandler(this.txtrsv_TextChanged);
+            // 
+            // materialLabel11
+            // 
+            this.materialLabel11.AutoSize = true;
+            this.materialLabel11.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel11.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel11.Location = new System.Drawing.Point(21, 355);
+            this.materialLabel11.Name = "materialLabel11";
+            this.materialLabel11.Size = new System.Drawing.Size(135, 20);
+            this.materialLabel11.TabIndex = 10;
+            this.materialLabel11.Text = "Smoking Violation: ";
+            // 
+            // materialLabel10
+            // 
+            this.materialLabel10.AutoSize = true;
+            this.materialLabel10.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel10.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel10.Location = new System.Drawing.Point(21, 395);
+            this.materialLabel10.Name = "materialLabel10";
+            this.materialLabel10.Size = new System.Drawing.Size(155, 20);
+            this.materialLabel10.TabIndex = 9;
+            this.materialLabel10.Text = "Complete Accesories:";
+            // 
+            // materialLabel9
+            // 
+            this.materialLabel9.AutoSize = true;
+            this.materialLabel9.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel9.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel9.Location = new System.Drawing.Point(21, 315);
+            this.materialLabel9.Name = "materialLabel9";
+            this.materialLabel9.Size = new System.Drawing.Size(77, 20);
+            this.materialLabel9.TabIndex = 8;
+            this.materialLabel9.Text = "Fuel Level:";
+            // 
+            // materialLabel8
+            // 
+            this.materialLabel8.AutoSize = true;
+            this.materialLabel8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel8.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel8.Location = new System.Drawing.Point(21, 275);
+            this.materialLabel8.Name = "materialLabel8";
+            this.materialLabel8.Size = new System.Drawing.Size(129, 20);
+            this.materialLabel8.TabIndex = 7;
+            this.materialLabel8.Text = "Exterior Condition:";
+            // 
+            // materialLabel7
+            // 
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel7.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel7.Location = new System.Drawing.Point(21, 235);
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(126, 20);
+            this.materialLabel7.TabIndex = 6;
+            this.materialLabel7.Text = "Interior Condition:";
+            // 
+            // materialLabel6
+            // 
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel6.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel6.Location = new System.Drawing.Point(21, 195);
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(138, 20);
+            this.materialLabel6.TabIndex = 5;
+            this.materialLabel6.Text = "Actual Return Date:";
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel5.Location = new System.Drawing.Point(21, 155);
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(155, 20);
+            this.materialLabel5.TabIndex = 4;
+            this.materialLabel5.Text = "Expected Return Date:";
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel4.Location = new System.Drawing.Point(280, 75);
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(127, 20);
+            this.materialLabel4.TabIndex = 3;
+            this.materialLabel4.Text = "Customer\'s Name:";
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel3.Location = new System.Drawing.Point(280, 115);
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(113, 20);
+            this.materialLabel3.TabIndex = 2;
+            this.materialLabel3.Text = "Ending Mileage:";
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel2.Location = new System.Drawing.Point(21, 115);
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(119, 20);
+            this.materialLabel2.TabIndex = 1;
+            this.materialLabel2.Text = "Starting Mileage:";
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.DimGray;
+            this.materialLabel1.Location = new System.Drawing.Point(21, 75);
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(108, 20);
+            this.materialLabel1.TabIndex = 0;
+            this.materialLabel1.Text = "Reservation ID:";
             // 
             // InspectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 630);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.materialLabel12);
-            this.Controls.Add(this.cnbt);
-            this.Controls.Add(this.svbt);
-            this.Controls.Add(this.caNobt);
-            this.Controls.Add(this.caYesbt);
-            this.Controls.Add(this.svNobt);
-            this.Controls.Add(this.svYesbt);
-            this.Controls.Add(this.cmbFL);
-            this.Controls.Add(this.cmbEC);
-            this.Controls.Add(this.cmbIC);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.txtem);
-            this.Controls.Add(this.txtsm);
-            this.Controls.Add(this.txtcstmr);
-            this.Controls.Add(this.txtrsv);
-            this.Controls.Add(this.materialLabel11);
-            this.Controls.Add(this.materialLabel10);
-            this.Controls.Add(this.materialLabel9);
-            this.Controls.Add(this.materialLabel8);
-            this.Controls.Add(this.materialLabel7);
-            this.Controls.Add(this.materialLabel6);
-            this.Controls.Add(this.materialLabel5);
-            this.Controls.Add(this.materialLabel4);
-            this.Controls.Add(this.materialLabel3);
-            this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.materialLabel1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(600, 650);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "InspectionForm";
-            this.Text = "InspectionForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Vehicle Inspection";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
-        #endregion
-
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private MaterialSkin.Controls.MaterialLabel materialLabel7;
-        private MaterialSkin.Controls.MaterialLabel materialLabel8;
-        private MaterialSkin.Controls.MaterialLabel materialLabel9;
-        private MaterialSkin.Controls.MaterialLabel materialLabel10;
-        private MaterialSkin.Controls.MaterialLabel materialLabel11;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label materialLabel1;
+        private System.Windows.Forms.Label materialLabel2;
+        private System.Windows.Forms.Label materialLabel3;
+        private System.Windows.Forms.Label materialLabel4;
+        private System.Windows.Forms.Label materialLabel5;
+        private System.Windows.Forms.Label materialLabel6;
+        private System.Windows.Forms.Label materialLabel7;
+        private System.Windows.Forms.Label materialLabel8;
+        private System.Windows.Forms.Label materialLabel9;
+        private System.Windows.Forms.Label materialLabel10;
+        private System.Windows.Forms.Label materialLabel11;
         private System.Windows.Forms.TextBox txtrsv;
         private System.Windows.Forms.TextBox txtcstmr;
         private System.Windows.Forms.TextBox txtsm;
@@ -466,13 +447,13 @@
         private System.Windows.Forms.ComboBox cmbIC;
         private System.Windows.Forms.ComboBox cmbEC;
         private System.Windows.Forms.ComboBox cmbFL;
-        private MaterialSkin.Controls.MaterialRadioButton svYesbt;
-        private MaterialSkin.Controls.MaterialRadioButton svNobt;
-        private MaterialSkin.Controls.MaterialRadioButton caYesbt;
-        private MaterialSkin.Controls.MaterialRadioButton caNobt;
-        private MaterialSkin.Controls.MaterialRaisedButton svbt;
-        private MaterialSkin.Controls.MaterialRaisedButton cnbt;
-        private MaterialSkin.Controls.MaterialLabel materialLabel12;
+        private System.Windows.Forms.RadioButton svYesbt;
+        private System.Windows.Forms.RadioButton svNobt;
+        private System.Windows.Forms.RadioButton caYesbt;
+        private System.Windows.Forms.RadioButton caNobt;
+        private System.Windows.Forms.Button svbt;
+        private System.Windows.Forms.Button cnbt;
+        private System.Windows.Forms.Label materialLabel12;
         public System.Windows.Forms.TextBox textBox1;
     }
 }
