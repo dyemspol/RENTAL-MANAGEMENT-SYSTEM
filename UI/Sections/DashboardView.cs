@@ -1,9 +1,9 @@
 using System;
 using System.Drawing;
-using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms.DataVisualization.Charting;
 using RentalApp.Models.Core;
 
 using RentalApp.Models.Services;
@@ -28,6 +28,7 @@ namespace RentalApp.UI.Sections
             InitializeCards();
             InitializeRecentActivity();
             InitializeQuickActions();
+            InitializeAnalytics();
         }
 
         private void InitializeCards()
@@ -194,6 +195,45 @@ namespace RentalApp.UI.Sections
             btn.Margin = new Padding(0, 0, 0, 15);
             btn.Cursor = Cursors.Hand;
             return btn;
+        }
+
+        private void InitializeAnalytics()
+        {
+            analyticsPanel.Controls.Clear();
+            
+            Chart chart = new Chart();
+            chart.Dock = DockStyle.Fill;
+            chart.BackColor = Color.White;
+            
+            ChartArea area = new ChartArea();
+            area.AxisX.MajorGrid.LineColor = Color.LightGray;
+            area.AxisY.MajorGrid.LineColor = Color.LightGray;
+            area.AxisX.LabelStyle.Font = new Font("Segoe UI", 8F);
+            area.AxisY.LabelStyle.Font = new Font("Segoe UI", 8F);
+            chart.ChartAreas.Add(area);
+
+            Series series = new Series("Revenue")
+            {
+                ChartType = SeriesChartType.Column,
+                XValueType = ChartValueType.String,
+                Palette = ChartColorPalette.SeaGreen
+            };
+
+            var data = _billingManager.GetWeeklySalesTrend();
+            string[] days = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+            
+            for (int i = 0; i < 7; i++)
+            {
+                series.Points.AddXY(days[i], data.ContainsKey(i) ? data[i] : 0);
+            }
+
+            chart.Series.Add(series);
+            
+            Title title = new Title("Weekly Revenue Trend");
+            title.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            chart.Titles.Add(title);
+
+            analyticsPanel.Controls.Add(chart);
         }
 
         private void cardsPanel_Paint(object sender, PaintEventArgs e)

@@ -25,8 +25,10 @@ namespace RentalApp.UI.Sections
             this.recentActivityPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.sectionHeaderTable = new System.Windows.Forms.TableLayoutPanel();
             this.lblRecent = new System.Windows.Forms.Label();
+            this.lblAnalytics = new System.Windows.Forms.Label();
             this.lblQuick = new System.Windows.Forms.Label();
             this.quickActionsPanel = new System.Windows.Forms.Panel();
+            this.analyticsPanel = new System.Windows.Forms.Panel();
             this.sectionHeaderTable.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +61,7 @@ namespace RentalApp.UI.Sections
             this.recentActivityPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.recentActivityPanel.Location = new System.Drawing.Point(0, 316);
             this.recentActivityPanel.Name = "recentActivityPanel";
-            this.recentActivityPanel.Size = new System.Drawing.Size(920, 474);
+            this.recentActivityPanel.Size = new System.Drawing.Size(520, 474);
             this.recentActivityPanel.TabIndex = 3;
             this.recentActivityPanel.WrapContents = false;
             // 
@@ -67,11 +69,13 @@ namespace RentalApp.UI.Sections
             // 
             this.sectionHeaderTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sectionHeaderTable.ColumnCount = 2;
-            this.sectionHeaderTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.sectionHeaderTable.ColumnCount = 3;
+            this.sectionHeaderTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.sectionHeaderTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.sectionHeaderTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.sectionHeaderTable.Controls.Add(this.lblRecent, 0, 0);
-            this.sectionHeaderTable.Controls.Add(this.lblQuick, 1, 0);
+            this.sectionHeaderTable.Controls.Add(this.lblAnalytics, 1, 0);
+            this.sectionHeaderTable.Controls.Add(this.lblQuick, 2, 0);
             this.sectionHeaderTable.Location = new System.Drawing.Point(0, 270);
             this.sectionHeaderTable.Name = "sectionHeaderTable";
             this.sectionHeaderTable.RowCount = 1;
@@ -101,6 +105,17 @@ namespace RentalApp.UI.Sections
             this.lblQuick.TabIndex = 1;
             this.lblQuick.Text = "Quick Actions";
             // 
+            // lblAnalytics
+            // 
+            this.lblAnalytics.AutoSize = true;
+            this.lblAnalytics.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.lblAnalytics.ForeColor = System.Drawing.Color.DimGray;
+            this.lblAnalytics.Location = new System.Drawing.Point(500, 0);
+            this.lblAnalytics.Name = "lblAnalytics";
+            this.lblAnalytics.Size = new System.Drawing.Size(76, 21);
+            this.lblAnalytics.TabIndex = 2;
+            this.lblAnalytics.Text = "Analytics";
+            // 
             // quickActionsPanel
             // 
             this.quickActionsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -111,9 +126,19 @@ namespace RentalApp.UI.Sections
             this.quickActionsPanel.Size = new System.Drawing.Size(500, 474);
             this.quickActionsPanel.TabIndex = 4;
             // 
+            // analyticsPanel
+            // 
+            this.analyticsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.analyticsPanel.Location = new System.Drawing.Point(530, 316);
+            this.analyticsPanel.Name = "analyticsPanel";
+            this.analyticsPanel.Size = new System.Drawing.Size(380, 474);
+            this.analyticsPanel.TabIndex = 5;
+            // 
             // DashboardView
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
+            this.Controls.Add(this.analyticsPanel);
             this.Controls.Add(this.quickActionsPanel);
             this.Controls.Add(this.recentActivityPanel);
             this.Controls.Add(this.sectionHeaderTable);
@@ -133,7 +158,9 @@ namespace RentalApp.UI.Sections
         private System.Windows.Forms.FlowLayoutPanel recentActivityPanel;
         private System.Windows.Forms.TableLayoutPanel sectionHeaderTable;
         private System.Windows.Forms.Label lblRecent;
+        private System.Windows.Forms.Label lblAnalytics;
         private System.Windows.Forms.Label lblQuick;
         private System.Windows.Forms.Panel quickActionsPanel;
+        private System.Windows.Forms.Panel analyticsPanel;
     }
 }
