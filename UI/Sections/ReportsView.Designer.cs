@@ -30,11 +30,13 @@ namespace RentalApp.UI.Sections
             this.chartPlaceholderPanel = new System.Windows.Forms.Panel();
             this.statusChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.revenueChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.reportsGrid = new System.Windows.Forms.DataGridView();
             this.generateButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.chartPlaceholderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.revenueChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportsGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -108,8 +110,7 @@ namespace RentalApp.UI.Sections
             // 
             // chartPlaceholderPanel
             // 
-            this.chartPlaceholderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.chartPlaceholderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chartPlaceholderPanel.BackColor = System.Drawing.Color.White;
             this.chartPlaceholderPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -117,7 +118,7 @@ namespace RentalApp.UI.Sections
             this.chartPlaceholderPanel.Controls.Add(this.revenueChart);
             this.chartPlaceholderPanel.Location = new System.Drawing.Point(21, 85);
             this.chartPlaceholderPanel.Name = "chartPlaceholderPanel";
-            this.chartPlaceholderPanel.Size = new System.Drawing.Size(836, 288);
+            this.chartPlaceholderPanel.Size = new System.Drawing.Size(836, 140);
             this.chartPlaceholderPanel.TabIndex = 6;
             // 
             // statusChart
@@ -134,7 +135,7 @@ namespace RentalApp.UI.Sections
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.statusChart.Series.Add(series1);
-            this.statusChart.Size = new System.Drawing.Size(416, 286);
+            this.statusChart.Size = new System.Drawing.Size(416, 138);
             this.statusChart.TabIndex = 1;
             this.statusChart.Text = "statusChart";
             this.statusChart.Click += new System.EventHandler(this.statusChart_Click);
@@ -152,9 +153,29 @@ namespace RentalApp.UI.Sections
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.revenueChart.Series.Add(series2);
-            this.revenueChart.Size = new System.Drawing.Size(418, 286);
+            this.revenueChart.Size = new System.Drawing.Size(418, 138);
             this.revenueChart.TabIndex = 0;
             this.revenueChart.Text = "revenueChart";
+            // 
+            // reportsGrid
+            // 
+            this.reportsGrid.AllowUserToAddRows = false;
+            this.reportsGrid.AllowUserToDeleteRows = false;
+            this.reportsGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.reportsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.reportsGrid.BackgroundColor = System.Drawing.Color.White;
+            this.reportsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reportsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.reportsGrid.Location = new System.Drawing.Point(21, 235);
+            this.reportsGrid.Name = "reportsGrid";
+            this.reportsGrid.ReadOnly = true;
+            this.reportsGrid.RowHeadersVisible = false;
+            this.reportsGrid.RowHeadersWidth = 51;
+            this.reportsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.reportsGrid.Size = new System.Drawing.Size(836, 250);
+            this.reportsGrid.TabIndex = 9;
             // 
             // generateButton
             // 
@@ -191,6 +212,7 @@ namespace RentalApp.UI.Sections
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.reportsGrid);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.generateButton);
             this.Controls.Add(this.chartPlaceholderPanel);
@@ -205,6 +227,7 @@ namespace RentalApp.UI.Sections
             this.chartPlaceholderPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.statusChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.revenueChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportsGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,6 +244,7 @@ namespace RentalApp.UI.Sections
         private System.Windows.Forms.DataVisualization.Charting.Chart statusChart;
         private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView reportsGrid;
     }
 }
 

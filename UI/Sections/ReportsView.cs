@@ -12,6 +12,27 @@ namespace RentalApp.UI.Sections
             InitializeComponent();
             InitializeDragAndDrop();
             InitializeCharts();
+            InitializeGrid();
+        }
+
+        private void InitializeGrid()
+        {
+            reportsGrid.Columns.Add("Date", "Date");
+            reportsGrid.Columns.Add("Category", "Category");
+            reportsGrid.Columns.Add("Description", "Description");
+            reportsGrid.Columns.Add("Amount", "Amount (₱)");
+            reportsGrid.Columns.Add("Status", "Status");
+
+            // Dummy Data
+            reportsGrid.Rows.Add("01/01/2026", "Rental", "Toyota Vios Rental - 3 Days", "4,500.00", "Completed");
+            reportsGrid.Rows.Add("01/02/2026", "Rental", "Honda City Rental - 2 Days", "3,200.00", "Completed");
+            reportsGrid.Rows.Add("01/03/2026", "Maintenance", "Oil Change - Ford Everest", "-1,500.00", "Paid");
+            reportsGrid.Rows.Add("01/05/2026", "Rental", "Isuzu D-Max Rental - 5 Days", "12,500.00", "Active");
+            reportsGrid.Rows.Add("01/08/2026", "Fine", "Late Return Penalty", "500.00", "Collected");
+            reportsGrid.Rows.Add("01/10/2026", "Rental", "Mitsubishi Montero - 7 Days", "21,000.00", "Reserved");
+            reportsGrid.Rows.Add("01/11/2026", "Insurance", "Monthly Fleet Insurance", "-5,000.00", "Pending");
+            reportsGrid.Rows.Add("01/12/2026", "Rental", "Nissan NV350 - 1 Day", "3,500.00", "Active");
+            reportsGrid.Rows.Add("01/15/2026", "Service", "Tire Replacement - Plate ABC 123", "-8,000.00", "Scheduled");
         }
 
         private void InitializeCharts()
