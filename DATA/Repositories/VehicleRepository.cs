@@ -312,6 +312,23 @@ namespace RentalApp.Data.Repositories
             return distribution;
         }
 
+        // HELPER - Check if VIN already exists
+        public bool VinExists(string vin)
+        {
+            string sql = "SELECT COUNT(*) FROM Vehicles WHERE VIN = @vin";
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@vin", vin);
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count > 0;
+                }
+            }
+        }
+
         // HELPER - Map database reader to Vehicle object
         private Vehicle MapReaderToVehicle(MySqlDataReader reader)
         {

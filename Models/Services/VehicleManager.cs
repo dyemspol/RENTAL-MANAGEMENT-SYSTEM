@@ -47,6 +47,12 @@ namespace RentalApp.Models.Services
                 throw new ArgumentException("VIN is required.");
             }
 
+            // Check if VIN already exists
+            if (_vehicleRepository.VinExists(vehicle.VIN))
+            {
+                throw new ArgumentException($"A vehicle with VIN '{vehicle.VIN}' already exists. Please use a unique VIN.");
+            }
+
             if (vehicle.CategoryId == 0)
             {
                 throw new ArgumentException("Category is required.");

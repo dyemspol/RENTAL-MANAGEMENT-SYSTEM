@@ -109,14 +109,63 @@ namespace RentalApp.UI.Popups
                 newVehicle = new Van();
             }
 
+            // Validate all required fields before proceeding
+            if (string.IsNullOrWhiteSpace(txtmake.Text))
+            {
+                MessageBox.Show("Please enter the vehicle make.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtmodel.Text))
+            {
+                MessageBox.Show("Please enter the vehicle model.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtyear.Text) || !int.TryParse(txtyear.Text, out int year))
+            {
+                MessageBox.Show("Please enter a valid year.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtcolor.Text))
+            {
+                MessageBox.Show("Please enter the vehicle color.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtvin.Text))
+            {
+                MessageBox.Show("Please enter the VIN.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtmileage.Text) || !int.TryParse(txtmileage.Text, out int mileage))
+            {
+                MessageBox.Show("Please enter a valid mileage.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtlicense.Text))
+            {
+                MessageBox.Show("Please enter the license plate.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (comboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a fuel type.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             newVehicle.Make = txtmake.Text;
             newVehicle.Model = txtmodel.Text;
-            newVehicle.Year = Convert.ToInt32(txtyear.Text);
+            newVehicle.Year = year;
             newVehicle.Color = txtcolor.Text;
             newVehicle.Fuel = (FuelType)comboBox1.SelectedItem;
             newVehicle.Transmission = transmission;
             newVehicle.VIN = txtvin.Text;
-            newVehicle.Mileage = Convert.ToInt32(txtmileage.Text);
+            newVehicle.Mileage = mileage;
             newVehicle.Status = VehicleStatus.Available;
             newVehicle.LicensePlate = txtlicense.Text;
             newVehicle.SeatingCapacity = (int)seat.Value;

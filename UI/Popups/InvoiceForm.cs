@@ -45,7 +45,16 @@ namespace RentalApp.UI.Popups
             // Set data
             textBox1.Text = _rental.CustomerName;
             textBox2.Text = _rental.VehicleInfo;
+            
+            // Configure DateTimePickers to show time
+            dtpSRD.Format = DateTimePickerFormat.Custom;
+            dtpSRD.CustomFormat = "MM/dd/yyyy hh:mm tt";
+            dtpSRD.ShowUpDown = false;
             dtpSRD.Value = _rental.ActualPickupDate;
+            
+            dtpERD.Format = DateTimePickerFormat.Custom;
+            dtpERD.CustomFormat = "MM/dd/yyyy hh:mm tt";
+            dtpERD.ShowUpDown = false;
             dtpERD.Value = _rental.ActualReturnDate ?? DateTime.Now;
 
             // Load Category

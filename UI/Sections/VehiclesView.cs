@@ -157,7 +157,10 @@ namespace RentalApp.UI.Sections
             }
             using (var addForm = new Popups.AddVehicleForm())
             {
-                addForm.ShowDialog();
+                if(addForm.ShowDialog() == DialogResult.OK)
+                {
+                    LoadVehicles();
+                }
             }
         }
 
