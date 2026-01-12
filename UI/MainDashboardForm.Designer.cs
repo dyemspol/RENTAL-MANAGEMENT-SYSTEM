@@ -37,6 +37,7 @@ namespace RentalApp.UI
             this.reservationsButton = new System.Windows.Forms.Button();
             this.customersButton = new System.Windows.Forms.Button();
             this.vehiclesButton = new System.Windows.Forms.Button();
+            this.usersButton = new System.Windows.Forms.Button();
             this.dashboardButton = new System.Windows.Forms.Button();
             this.logoLabel = new System.Windows.Forms.Label();
             this.topBarPanel = new System.Windows.Forms.Panel();
@@ -78,6 +79,7 @@ namespace RentalApp.UI
             this.sidebarPanel.Controls.Add(this.reservationsButton);
             this.sidebarPanel.Controls.Add(this.customersButton);
             this.sidebarPanel.Controls.Add(this.vehiclesButton);
+            this.sidebarPanel.Controls.Add(this.usersButton);
             this.sidebarPanel.Controls.Add(this.dashboardButton);
             this.sidebarPanel.Controls.Add(this.logoLabel);
             this.sidebarPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -112,6 +114,22 @@ namespace RentalApp.UI
             this.reportsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.reportsButton.UseVisualStyleBackColor = true;
             this.reportsButton.Click += new System.EventHandler(this.navButton_Click);
+            // 
+            // usersButton
+            // 
+            this.usersButton.FlatAppearance.BorderSize = 0;
+            this.usersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.usersButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.usersButton.ForeColor = System.Drawing.Color.White;
+            this.usersButton.Location = new System.Drawing.Point(0, 650);
+            this.usersButton.Name = "usersButton";
+            this.usersButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.usersButton.Size = new System.Drawing.Size(200, 40);
+            this.usersButton.TabIndex = 9;
+            this.usersButton.Text = "Users";
+            this.usersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.usersButton.UseVisualStyleBackColor = true;
+            this.usersButton.Click += new System.EventHandler(this.navButton_Click);
             // 
             // billingButton
             // 
@@ -505,6 +523,7 @@ namespace RentalApp.UI
         private System.Windows.Forms.Button reservationsButton;
         private System.Windows.Forms.Button customersButton;
         private System.Windows.Forms.Button vehiclesButton;
+        private System.Windows.Forms.Button usersButton;
         private System.Windows.Forms.Label logoLabel;
         private System.Windows.Forms.Panel topBarPanel;
         private System.Windows.Forms.Button closeButton;

@@ -41,6 +41,8 @@ namespace RentalApp.UI
             reportsButton.Visible = isFullAccess;
             dashboardButton.Visible = isFullAccess;
             
+            usersButton.Visible = _user.CanManageUsers();
+            
             customersButton.Visible = true;
             reservationsButton.Visible = true;
             pickupsButton.Visible = true;
@@ -156,6 +158,10 @@ namespace RentalApp.UI
             else if (button == reportsButton && _user.CanViewReports())
             {
                 ShowSection(new ReportsView());
+            }
+            else if (button == usersButton && _user.CanManageUsers())
+            {
+                ShowSection(new UsersView());
             }
         }
 
@@ -298,6 +304,18 @@ namespace RentalApp.UI
                         cardRevenueLabel.Text = "Paid Today";
                         cardRevenueValue.Text = _billingManager.CountToday().ToString();
                     }
+                    else if (section == "Users")
+                    {
+                        var userRepo = new RentalApp.Data.Repositories.UserRepository();
+                        cardFleetLabel.Text = "Total Users";
+                        cardFleetValue.Text = userRepo.GetAll().Count.ToString();
+                        
+                        cardActiveRentalsLabel.Text = "Admins";
+                        cardActiveRentalsValue.Text = userRepo.GetByRole("Admin").Count.ToString();
+
+                        cardRevenueLabel.Text = "Rental Agents";
+                        cardRevenueValue.Text = userRepo.GetByRole("RentalAgent").Count.ToString();
+                    }
                     else
                     {
                         cardFleetLabel.Text = "Total Fleet";
@@ -307,6 +325,7 @@ namespace RentalApp.UI
                         cardRevenueLabel.Text = "Total Revenue";
                         cardRevenueValue.Text = "₱" + _billingManager.SumRevenue().ToString("N0");
                     }
+
                 }
             }
             catch (Exception)
