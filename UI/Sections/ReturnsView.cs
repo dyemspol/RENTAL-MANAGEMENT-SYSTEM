@@ -145,6 +145,26 @@ namespace RentalApp.UI.Sections
 
         private void startReturnButton_Click(object sender, EventArgs e)
         {
+            if (returnsGrid.CurrentRow != null && returnsGrid.CurrentRow.Index >= 0)
+            {
+                var selectedRental = (Rental)returnsGrid.Rows[returnsGrid.CurrentRow.Index].DataBoundItem;
+                using (var form = new Popups.InspectionForm(selectedRental))
+                {
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        LoadRentalData();
+                    }
+                }
+            }
+        }
+
+        private void headerLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void summaryLabel_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -18,7 +18,6 @@ namespace RentalApp.UI.Sections
             this.headerLabel = new System.Windows.Forms.Label();
             this.returnsGrid = new System.Windows.Forms.DataGridView();
             this.startReturnButton = new System.Windows.Forms.Button();
-            this.damageAssessmentButton = new System.Windows.Forms.Button();
             this.summaryLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.returnsGrid)).BeginInit();
             this.SuspendLayout();
@@ -33,6 +32,7 @@ namespace RentalApp.UI.Sections
             this.headerLabel.Size = new System.Drawing.Size(126, 20);
             this.headerLabel.TabIndex = 0;
             this.headerLabel.Text = "Vehicle Returns   ";
+            this.headerLabel.Click += new System.EventHandler(this.headerLabel_Click);
             // 
             // returnsGrid
             // 
@@ -60,28 +60,13 @@ namespace RentalApp.UI.Sections
             this.startReturnButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startReturnButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.startReturnButton.ForeColor = System.Drawing.Color.White;
-            this.startReturnButton.Location = new System.Drawing.Point(485, 39);
+            this.startReturnButton.Location = new System.Drawing.Point(548, 42);
             this.startReturnButton.Name = "startReturnButton";
-            this.startReturnButton.Size = new System.Drawing.Size(94, 20);
+            this.startReturnButton.Size = new System.Drawing.Size(94, 21);
             this.startReturnButton.TabIndex = 4;
             this.startReturnButton.Text = "Start Return";
             this.startReturnButton.UseVisualStyleBackColor = false;
             this.startReturnButton.Click += new System.EventHandler(this.startReturnButton_Click);
-            // 
-            // damageAssessmentButton
-            // 
-            this.damageAssessmentButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.damageAssessmentButton.BackColor = System.Drawing.Color.White;
-            this.damageAssessmentButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.damageAssessmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.damageAssessmentButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.damageAssessmentButton.ForeColor = System.Drawing.Color.DimGray;
-            this.damageAssessmentButton.Location = new System.Drawing.Point(585, 39);
-            this.damageAssessmentButton.Name = "damageAssessmentButton";
-            this.damageAssessmentButton.Size = new System.Drawing.Size(58, 20);
-            this.damageAssessmentButton.TabIndex = 5;
-            this.damageAssessmentButton.Text = "Damage";
-            this.damageAssessmentButton.UseVisualStyleBackColor = false;
             // 
             // summaryLabel
             // 
@@ -93,6 +78,7 @@ namespace RentalApp.UI.Sections
             this.summaryLabel.Size = new System.Drawing.Size(279, 15);
             this.summaryLabel.TabIndex = 1;
             this.summaryLabel.Text = "Inspect condition, record odometer and finalize bill.";
+            this.summaryLabel.Click += new System.EventHandler(this.summaryLabel_Click);
             // 
             // ReturnsView
             // 
@@ -100,7 +86,6 @@ namespace RentalApp.UI.Sections
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.summaryLabel);
-            this.Controls.Add(this.damageAssessmentButton);
             this.Controls.Add(this.startReturnButton);
             this.Controls.Add(this.returnsGrid);
             this.Controls.Add(this.headerLabel);
@@ -115,7 +100,6 @@ namespace RentalApp.UI.Sections
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.DataGridView returnsGrid;
         private System.Windows.Forms.Button startReturnButton;
-        private System.Windows.Forms.Button damageAssessmentButton;
         private System.Windows.Forms.Label summaryLabel;
     }
 }

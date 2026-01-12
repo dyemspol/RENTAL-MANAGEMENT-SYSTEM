@@ -15,11 +15,11 @@ INSERT INTO Users (Firstname, Lastname, Username, Password, Role) VALUES
 
 -- 2. INSERT VEHICLE CATEGORIES WITH RATES
 INSERT INTO VehicleCategories (CategoryName, HourlyRate, DailyRate, WeeklyRate, MonthlyRate, Description) VALUES
-('Sedan', 8.00, 50.00, 300.00, 1200.00, 'Comfortable 4-door sedans for city driving'),
-('SUV', 12.00, 80.00, 500.00, 2000.00, 'Spacious SUVs perfect for families'),
-('Hatchback', 6.00, 40.00, 250.00, 1000.00, 'Compact and fuel-efficient'),
-('Van', 15.00, 100.00, 650.00, 2500.00, 'Large vans for groups or cargo'),
-('Pickup', 10.00, 70.00, 450.00, 1800.00, 'Pickup trucks for hauling');
+('Sedan', 80.00, 1500.00, 9500.00, 40000.00, 'Comfortable 4-door sedans for city driving'),
+('SUV', 120.00, 2000.00, 13000.00, 50000.00, 'Spacious SUVs perfect for families'),
+('Hatchback', 70.00, 1300.00, 9000.00, 38000.00, 'Compact and fuel-efficient'),
+('Van', 150.00, 3000.00, 18000.00, 55000.00, 'Large vans for groups or cargo'),
+('Pickup', 200.00, 3500.00, 20000.00, 60000.00, 'Pickup trucks for hauling');
 
 -- 3. INSERT VEHICLE FEATURES
 INSERT INTO VehicleFeatures (FeatureName) VALUES
